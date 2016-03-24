@@ -1,5 +1,5 @@
 ##RecyclerView(垃圾回收视图)
-视觉表现数据项是许多移动应用很重要的一方面。传统的Android的这项功能，是AdapterView控件大家庭实现的。但是，它们存在一定局限性，特别是关于列表内容动画变化的高级功能。
+视觉表现数据项是许多移动应用很重要的一方面。传统的Android的这项功能，是AdapterView控件家族实现的。但是，它们存在一定局限性，特别是关于列表内容动画变化的高级功能。
 
 在2014年，Google通过Android支持包发布了RecyclerView。开发者可以添加recyclerview-v7到它们的项目中并使用Recycler作为大部分AdapterView家族的替代品。RecyclerView是完全新的一个更灵活的容器，有着很多的钩子和代理从而允许插入的行为。
 
@@ -28,4 +28,4 @@ AdapterView，特别是它的子类ListView和GridView,在Android应用开发中
 
 可能最大的策略问题是更新一个AdapterView倾向于要么全部更新要么不更新。如果模型数据改变了-新的行添加了，存在的行移除了或者数据改变,这些可能影响AdapterView的展现-唯一提供很好支持的解决方案是调用notifyDataSetChanged()并让AdapterView重新构建自己。这是缓慢的并且可能对选择状态有影响。并且如果你真的要在复杂的改变，并且在行添加或移除的时候使用动画效果，一半是不可能的。
 
-策略上，AdapterView,AbsListView(ListView和GridView的直接父类)，和ListView对许多门外汉来说就是一大堆跟pasta一样的代码。这些类中堆了太多的责任，以至于对Google来说可维护性是一种挑战，扩展性就属于理想而并非事实了。
+策略上，AdapterView,AbsListView(ListView和GridView的直接父类)，和ListView对许多门外汉来说就是一大堆跟pasta一样的代码。这些类中堆了太多的责任，以至于对Google来说可维护性是一种挑战，扩展性就有点不切实际了。
