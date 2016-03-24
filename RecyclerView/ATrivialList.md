@@ -2,17 +2,20 @@
 
 回到最初的AdapterView和adapter的章节，我们有Selection/Dynamic这个样例应用。这个应用展示了25个拉丁单词的列表，每个都有单词的长度和附加的图标（长短单词是不一样的):
 
-![wizard](/the_busy_coder's_guide/img/figure_433.png)
+![wizard](/the_busy_coder's_guide/img/figure_435.png)
 
 这呢，我们会回顾RecyclerView/SimpleList的样例项目，在移植Selection/Dynamic到使用RecyclerView的第一关。
 
-任何项目想要使用RecyclerView需要是哦那个来自Android支持包的recyclerview-v7库。Android Studio的用户仅仅需要在dependencies的闭包中的顶级加上它：
+####依赖
+
+任何项目想要使用RecyclerView需要是哦那个来自Android支持包的recyclerview-v7库。Android Studio的用户仅仅需要在dependencies的闭包中的顶部加上它：
 
 	dependencies{
    	compile 'com.android.support:recyclerview-v7:22.2.0'
 	}
 
-Eclipse用户会需要把类库项目从AndroidSDK中复制到另一个地方，导入这个拷贝到它们的Eclipse工作空间，然后把它作为类库添加到需要RecyclerView的应用。这个过程在这本书之前的内容涵盖过。
+Eclipse用户会需要把类库项目从AndroidSDK中复制到另一个地方，导入这个拷贝到它们的Eclipse工作空间，然后把它作为类库添加到需要RecyclerView的应用。
+这个过程在这本书之前的内容涵盖过。
 
 ####一个RecyclerViewActivity
 
@@ -49,7 +52,7 @@ ListView,我们可以使用ListActivity，来隔离一些ListView管理代码。
 
 	}
 
-重要的部分是getRecyclerView（）方法。这里如果我们没有初始化RecyclerView,我们创建它的一个实例然后通过setContentView（）设置活动的内容。中途，我们在RecyclerView上调用了setHasFixed(true)，告诉它它的大小不应该基于适配器的内容有所改变。知道这个能帮助RecyclerView更高效工作。
+重要的部分是getRecyclerView（）方法。这里如果我们没有初始化RecyclerView,我们创建它的一个实例然后通过setContentView（）设置活动的内容。我们在RecyclerView上调用了setHasFixed(true)，告诉它它的大小不应该基于适配器的内容有所改变。知道这个能帮助RecyclerView更高效工作。
 
 RecyclerViewActivty也有与它们的ListActivity类似的getAdapter和setAdapter()。我们会在这节之后的内容中探究适配器中有什么不同。我们也有一个setLayoutManager()的便利方法，它只是调用了底层的setLayoutManager()-我们在会下一节的RecyclerView的上下文了解布局管理器是什么。
 
