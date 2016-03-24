@@ -3,7 +3,6 @@
 目前为止，所有RecyclerView中的项有着相同的基础结构，只是这些项中控件的内容不同。但是，我们需要基于不同布局的有着实质不同的项也是完全
 有可能的。ListView及其亲属通过ListAdapter中的getViewTypeCount()和getItemViewType（）对其进行处理。RecyclerView和RecyclerView.Adapter
 提供了一个相似的机制，包括它们自己的getItemViewType（）变种方法。在这节中，我们会检视这个是如何在列表和网格。
-
 ####有头的列表
 
 有很多情况下，我们必须有某种类型的头。这些头的样子通常和其余行有着很大的区别，因此处理这个问题的最好方法是教导适配器关于多种行类型的事。
