@@ -14,7 +14,7 @@
 
 ###准备工作
 
-为了理解这章需要你已经读了核心章节，特别是AdapterView和adapter那章。
+为了理解这章需要你已经读了核心章节，特别是[AdapterViews和adapters](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/AdapterViewsAndAdapters)那章。
 
 一节包含了自定义XMLdrawables.另一节展示使用的内容是从媒体内容提供者拉取的。
 
