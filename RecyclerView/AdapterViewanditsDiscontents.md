@@ -1,10 +1,15 @@
 
 ###AdapterView以及对它的不满
 
-AdapterView，特别是它的子类ListView和GridView,在Android应用开发中承担了重要的工作。并且，对基本场景来说，它们还是相当令人满意的。
+AdapterView，特别是它的子类ListView和GridView,在Android应用开发中更是承担了重要的角色。对基本场景来说，它们还是相当令人满意的。
 
 但是，也存在问题。
 
-可能最大的策略问题是更新一个AdapterView倾向于要么全部更新要么不更新。如果模型数据改变了-新的行添加了，存在的行移除了或者数据改变,这些可能影响AdapterView的展现-唯一提供很好支持的解决方案是调用notifyDataSetChanged()并让AdapterView重新构建自己。这是缓慢的并且可能对选择状态有影响。并且如果你真的要在复杂的改变，并且在行添加或移除的时候使用动画效果，一半是不可能的。
+可能最大的策略性的问题是更新一个AdapterView的时候，要么全部更新要么不更新。如果模型数据改变了-新的行添加了，存在的行移除了或者数据改变了这些可能影响AdapterView的展现的行为-唯一提供很好支持的解决方案是调用notifyDataSetChanged()并让AdapterView重新构建自己。这个过程事缓慢的并且可能对像选择状态这样的事物有影响。如果你真的想要对进行复杂的改变，并且在行添加或移除的时候使用动画效果，
+一半已经不可能了。
 
-策略上，AdapterView,AbsListView(ListView和GridView的直接父类)，和ListView对许多门外汉来说就是一大堆跟pasta一样的代码。这些类中堆了太多的责任，以至于对Google来说可维护性是一种挑战，扩展性就有点不切实际了。
+策略上，AdapterView,AbsListView(ListView和GridView的直接父类)，和ListView对许多门外汉来说就是一大堆跟pasta一样的代码。
+这些类中堆了太多的职责，以至于对Google来说可维护性是一种挑战，扩展性就更可以说是不切实际了。
+
+
+
