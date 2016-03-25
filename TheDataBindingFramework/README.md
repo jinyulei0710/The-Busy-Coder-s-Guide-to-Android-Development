@@ -13,7 +13,7 @@
 注意：写到这的时候，这个东西还处于发布候选状态。最有可能的，虽然可能有些改动，当数据绑定处于产品发布的时候大部分这章的内容仍旧是相称的。
 
 目录：
-* [准备工作]()
+* [准备工作](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/TheDataBindingFramework/Prerequisites.md)
 * [什么，现在？]()
 * [基本步骤]()
 * [扩展的布局资源]()
