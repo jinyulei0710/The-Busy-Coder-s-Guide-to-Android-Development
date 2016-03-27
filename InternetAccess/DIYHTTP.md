@@ -261,9 +261,91 @@ QuestionsLoadedEvent是对一个SOQuestions实例的简单包装，作为EventBu
 MainActivity在onCreate()中设置了fragment，在onResume()和onPause（）中注册和注销了event bus，并在onEventMainThread()
 中处理了点击事件：
 
-####TODO
+	package com.commonsware.android.hurl;
 
+	import android.app.Activity;
+	import android.content.Intent;
+	import android.net.Uri;
+	import android.os.Bundle;
+
+	import de.greenrobot.event.EventBus;
+
+	public class MainActivity extends Activity{
+		@Override
+		protected void onCreate(Bundle savedInstanceState){
+			super.onCreate(savedInstanceState);
+
+			if(getFragmentManager().findFragmentById(android.R.id.content)==null){
+				getFragmentManager().beginTransaction()
+				                     add(android.R.id.content,new QuestionsFragment()).commit();
+			}
+		}
+
+        @Override
+        public void onResume(){
+        	super.onResume();
+        	EventBus.getDefault().register(this);
+        }
+
+        @Override
+        public void onPause(){
+        	EventBus.getDefault().unregister(this);
+        	super.onPause();
+        }
+
+        public void onEventMainThread(QuestionClicked event){
+        	startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse(event.item.link)));
+        }
+	}
+
+因此，MainActivity承担了一个使各种不同东西和谐结合起来的角色。QuestionsFragment是本地的控制器，处理由它的控件引发的直接事件。
+MainActivity负责处理越过一个单独fragment的事件－在此例中，它启动了一个浏览器来看点击过的问题。
+
+结果是展示问题的简单列表：
+![wizard](/the_busy_coder's_guide/img/figure_266.png)
+
+####Android带来了什么
+
+Google增强了HttpUrlConnection来做更多的事情来帮助开发者。注意：
+
+* 请求时自动使用Gzip压缩，添加适当的HTTP请求头来自动解压缩任意压缩过的返回(在Android 2.3添加的)
+* 它使用了Server Name Indication来帮助一些https注解来共享单个IP地址
+* API LEVEL 13(Android 4.0的时候)添加了一个java.net.ResponseCache基类的HttpResponseCache实现，设置之后就能显而易见地对你的HTTP请求进行混存。
+
+也要，感谢一些我们会简短论述的第三方代码(OkHttp)，Android 4.4时 HttpUrlConnection也支持用于在SSL的网页内容发布加速的[SYDP协议](https://en.wikipedia.org/wiki/SPDY).
+
+
+####StrictMode下的测试
+
+在文件那章提及到的StrictMode，在主应用线程执行网络I／O的时候也会被报告。更重要的，在Android3.0及以上的设备，默认情况下，当你在主现场执行networkI／O的时候，Android应用会闪退并抛出
+NetworkOnMainThreadException异常。
+
+因此，使用StrictMode或合适的模拟器来确保你没有在主应用线程执行networkI／O是个好主意。
+
+####那HttpClient呢？
+
+Android也包含或者曾经包含一个几乎完全一样的 4.0.2beta版本的Apache Httpclient类库。许多开发者使用这个，
+因为他们宁可要由这个类库提供的更丰富的API而不去管它的使用比java.net笨重。并且，说句实话，在Android 2.3之前
+它更为稳定。
+
+这有一些这个类库不再被Android2.3及以上版本推荐的原因：
+
+* 核心Android小组更能够添加功能到java.net实现的同时而维持向后兼容性，因为它的API范围比较小。
+* 之前Android中遇到的java.net实现的问题，大量的已经被修复过了。
+* Apache HttpClient项目持续不断的演化它的API。这就意味着Android会继续落后并且落后的越来愈多于最新的ApacheHttpClient类库。因为
+ Android坚持维护最好的向后兼容可能性，因此不能使用较新的但不同的HttpClient版本。
+* Google官方在Android 5.1中废弃了这个API。
+* Google官方在Android 6.0中移除了这个API。
+
+如果有着使用HttpClent API的遗留代码，请考虑使用Apache的[给Android使用的HttpClient独立版本](https://hc.apache.org/httpcomponents-client-4.3.x/android-port.html)。
+
+并且，如果你不能这么做，并且你使用给Android用的Gradle来构建的话（例如，你使用的是AndroidStudio的默认设置），你可以在android闭包中添加
+'org.apache.http.legacy'来让你能访问Android的库存HttpClient API：
 		
+		android{
+			useLibrary 'org.apache.http.legacy'
+			//其它设置在这
+		}
 
 
 
