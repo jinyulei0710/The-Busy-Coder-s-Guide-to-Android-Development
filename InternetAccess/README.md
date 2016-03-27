@@ -11,7 +11,7 @@ HTTP，XMPP，SMTP等等。
 目录
 
 * [DIY HTTP](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/InternetAccess/DIYHTTP.md)
-* [通过DownloadManager的HTTP]()
+* [通过DownloadManager的HTTP](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/InternetAccess/HTTPviaDownloadManager.md)
 * [使用第三方jar包]()
 * [SSL]()
 * [使用HTTP客户端库]()
