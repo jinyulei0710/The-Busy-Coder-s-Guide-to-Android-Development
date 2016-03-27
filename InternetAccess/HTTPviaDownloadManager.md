@@ -1,0 +1,6 @@
+###通过DownloadManager的HTTP
+
+如果你的目标是下载一些大文件的话，你可能最好使用在Android2.3添加的DownloadManager,因为它帮你处理了很多的底层的复杂性。例如，你开始在WIFI条件下下载，当用户离开房间设备就连接到了某种类型的移动数据，你需要重新连接到服务器，你要么重新下载，要么使用一些内容协商进行断点重连。DownloadManager进行的就是这个处理。
+
+但是，DownloadManager是依赖于一些广播Intent对象的，这是一项我们还没讨论到的技术，所以我们会延迟在这[本书之后的内容]()涵盖DownloadedManager。
+
