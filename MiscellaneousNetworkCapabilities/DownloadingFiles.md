@@ -317,6 +317,20 @@ BroadcastReceiver 实现了检查进入Intent的action字符串（通过调用ge
 
 当然，文件是下载的.
 
+####限制
 
+虽然DownloadManager现在支持了HTTPS(SSL)URLS，这在Android 2.3之前是没有的。如果你需要支持较旧版本的Android的话，你会要测试所有你要给
+DownloadManager用的HTTPS URLS。
 
-####TODO
+如果你展示了所有下载的列表，并且你的下载在其中的话，确保某个activity能在下载的MIME上响应到一个ACTION_VIEW Intent。否则的话，当用户点击列表上的
+条目上的时候，他们会得到一个指示没有可用的来展示下载东西的Toast。这可能使用户迷惑。两者选一的，在你的请求上使用setVisibleInDownloadsUi,传入false,把
+它从这个列表中压制出来。
+
+同样的，从Android 5.0开始，下载这个应用提供了DownloadManager当其它应用被卸载的时候的记录核心实现。在那一点上，
+下载这个应用会删除由所卸载的应用DownloadManager行为下载的文件。这包含通常在卸载时存活的存储在公用位置文件。例如，
+你在Android 5.0以上设备安装了Internet/Downlaod样例应用，然后卸载应用，下载的文件会从下载应用的列表中消失。如果你选择
+使用DownloadManager，你应该从下面两种选一种:
+
+* 把文件下载到一个临时的位置，然后自己把它移动到一个长期的位置，或者
+* 通知用户文件会在用户卸载你的应用的时候被删除，建议用户做一个文件的安全拷贝|||Trail:Media|||
+
