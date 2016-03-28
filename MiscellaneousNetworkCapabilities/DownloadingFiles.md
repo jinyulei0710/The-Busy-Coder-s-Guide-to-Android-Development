@@ -293,6 +293,7 @@ BroadcastReceiver 实现了检查进入Intent的action字符串（通过调用ge
 ![wizard](/the_busy_coder's_guide/img/figure_681.png)
 
 附加信息也被倾倒到Logcat:
+
    	  03-28 17:44:17.136 6411-6411/com.commonsware.android.downmgr D/com.commonsware.android.downmgr.DownloadFragment: COLUMN_ID: 863
    	  03-28 17:44:17.136 6411-6411/com.commonsware.android.downmgr D/com.commonsware.android.downmgr.DownloadFragment: COLUMN_BYTES_DOWNLOADED_SO_  FAR: 0
       03-28 17:44:17.136 6411-6411/com.commonsware.android.downmgr D/com.commonsware.android.downmgr.DownloadFragment: COLUMN_LAST_MODIFIED_TIMESTAMP: 1459158115894
