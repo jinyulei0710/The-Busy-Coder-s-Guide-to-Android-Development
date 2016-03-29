@@ -102,4 +102,123 @@ Builder也有其它的方法，例如post()，它提供了请求的附加数据�
 这里，我们使用charstream()获取了一个Reader,然后我们把这个Reader封装进一个BufferedReader.run()方法的其余部分
 跟原本的是几乎一样的，要求Gson解析响应体并在应用主线程上发起一个QuestionsLoadedEvent来获取问题到我们的fragment。
 
-####TODO
+####Retrofit
+
+当使用HTTP请求的时候，多次的我们的需求是相当简单的，只是从一些网站服务取回一些JSON(或其它例如XML的机构数据)，或者上传一些JSON到网站服务。
+
+[Retrofit](http://square.github.io/retrofit/)是为了简化这个过程而设计的，为我们处理数据解析和封装，HTTP操作以及（可选的）后台线程。我们被留下
+一个相当自然的Java API来进行 发送/接受 Java对象 到／从 网站服务。
+
+Retrofit通过灵巧地使用注解，反射以及OkHttp本身来完成这个工作。
+
+为了展示Retrofit,让我们查看下[HTTP/Retrofit](https://github.com/jinyulei0710/cw-omnibus/tree/master/HTTP/Retrofit)这个样例项目。这个项目是之前的一个拷贝，这次试用的
+是Retrofit来取回我们的StackFlow问题。
+
+注意StackOverflow正好使用JSON作为它的数据格式，和Retrofit配合的非常好，因为JSON是它默认的数据格式。
+但是，你也可以提供你自己的转换逻辑，把数据转化到/从其它格式，例如XML或[Protocol Buffers](https://developers.google.com/protocol-buffers/)。
+
+####下载和安装Retrofit
+
+Retrofit可以以一个小JAR包的形势从前面提到的[Retrofit网站](http://square.github.io/retrofit/)上下载。在Android Studio中则需要加入如下依赖：
+
+		dependencies {
+            compile 'com.squareup.retrofit2:retrofit:2.0.0'
+            compile 'com.squareup.retrofit2:converter-gson:2.0.0'
+            compile 'org.greenrobot:eventbus:3.0.0'
+         }
+
+####创建你的服务接口
+
+第一件我们需要告诉Retrofit更多的是我们的JSON从哪来。为了这么做，我们需要使用一些特定的由Retrofit提供的注解和描述来创建一个Java接口
+
+* 我们想要执行的HTTP操作
+* 路径（如果有的话请求参数）来应用一个HTTP操作
+* 配置HTTP操作的预先请求数据，例如用于REST样式API的路径的动态部分，附加到URL的补充参数
+* HTTP响应应该倒入到什么对象
+
+例如，让我们看下StackOverflowInterface，我们的接口用于请求Stack Exchange的API来从StackOverflow获取问题：
+
+     package com.commonsware.android.retrofit;
+
+		import retrofit2.Call;
+		import retrofit2.http.GET;
+		import retrofit2.http.Query;
+
+		public interface StackOverflowInterface {
+  			@GET("/2.1/questions?order=desc&sort=creation&site=stackoverflow")
+ 			 Call<SOQuestions> questions(@Query("tagged") String tags);
+		}
+
+接口中的每个方法应该有一个识别要执行HTTP操作的注解，例如@GET或@POST。注解的参数是请求的路径以及所有固定的
+请求参数。在我们的例子中，我们使用了由Stack Exchange文档提供的取得问题的路径(/2.1/questions),外加一些固定的请求参数：
+
+* order用于结果是应该生序还是降序
+* sort指示问题是如何排序的，例如creation就是按创建事件排序
+* site指示我们请求的是哪个Stack Exchange的站点(例如，stackoverflow)
+
+方法名则是随意的。
+
+如果你有额外的动态变化的请求参数，你可以在String参数上使用@	Query注解让它们添加到URL的末尾。
+在我们的例中，tagged请求参数会和我们questions()方法中的参数一起添加。
+
+同样的，你可以使用{name}占位符用于path的部分，并且在运行时通过@Path-注解参数替换方法中的参数。
+
+
+为了获取返回的结果，并指示结果的数据类型，你有着两个选择，同步和异步，但是在2.0中是同一个声明方式。
+
+
+说来古怪，我们永远不会自己创建StackOverflowInterface的实现。作为替代，Retrofit为我们生成了一个，这个代码实现了我们要求的行为。
+
+####创建Retrofit
+
+为了使用这个生成的StackOverflowInterface，并实际执行这些操作，我们需要创建一个Retrofit实例。通常，我们会通过Retrofit.Builder来配置你
+想要完成的。
+
+你要提供给Retrofit.Builder的最大的事情是这些HTTP操作绑定的服务。调用baseUrl()允许你详细说明URL的模式，主机以及端口。调用addConverterFactory()
+允许你设置数据转化所使用的格式。例如此例中，我们连接的是https://api.stackexchange.com服务，使用的是Gson，所以我们有：
+
+
+		Retrofit retrofit=new Retrofit.Builder()
+            .baseUrl("https://api.stackexchange.com")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build();
+
+当你完成Retrofit.Builder的配置，调用build()来获取结果retrofit。
+
+
+####发起请求
+
+有了配置好的Retrofit，你可以通过调用create()方法取回一个你的API接口的实现：
+     
+         StackOverflowInterface so=
+            retrofit.create(StackOverflowInterface.class);
+
+你可以无差异地像其他Java对象一样使用结果的接口类型的对象，尽管你从没有自己写这个接口的实现。
+
+在我们的例子中，我们可以调用questions()方法，并提供给它我们想要的最近问题的tag(或多个tag)：
+        
+         Call<SOQuestions> call=so.questions("android");
+
+
+然后执行call的入队操作，成功时，更新listview的adapter,失败时，toast错误信息，并打印错误日志。
+
+         call.enqueue(new Callback<SOQuestions>() {
+          @Override
+          public void onResponse(Call<SOQuestions> call, Response<SOQuestions> response) {
+             setListAdapter(new ItemsAdapter(response.body().items));
+
+          }
+
+           @Override
+            public void onFailure(Call<SOQuestions> call, Throwable t) {
+              Toast.makeText(getActivity(), t.getMessage(),
+                Toast.LENGTH_LONG).show();
+              Log.e(getClass().getSimpleName(),
+                "Exception from Retrofit request to StackOverflow", t);
+         }
+      });                
+
+
+
+
+
