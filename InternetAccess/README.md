@@ -14,6 +14,6 @@ HTTP，XMPP，SMTP等等。
 * [通过DownloadManager的HTTP](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/InternetAccess/HTTPviaDownloadManager.md)
 * [使用第三方jar包]()
 * [SSL]()
-* [使用HTTP客户端库]()
+* [使用HTTP客户端库](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/InternetAccess/UsingHTTPClientLibraries.md)
 * [走小径]()
 
