@@ -226,7 +226,7 @@ Retrofit可以以一个小JAR包的形势从前面提到的[Retrofit网站](http
 
 例如，Stack Overflow用户有头像。在我们的样例应用中，展示问这个问题的用户的头像可能比较好。
 
-[Picasso]是一个来自Square为帮助异步加载图片而设计的类库，不管图片是来自HTTP请求，本地文件，内容提供者，等。
+[Picasso](http://square.github.io/picasso/)是一个来自Square为帮助异步加载图片而设计的类库，不管图片是来自HTTP请求，本地文件，内容提供者，等。
 除了进行异步加载之外，Picasso简化了很多在这些图片上的操作，例如：
 
 * 结果缓存(对HTTP请求在磁盘上可选)
@@ -238,7 +238,106 @@ Retrofit可以以一个小JAR包的形势从前面提到的[Retrofit网站](http
 
 ####下载和安装Picasso
 
+Picasso可以以小JAR包的形式从[之前提到的网站](http://square.github.io/picasso/)下载。Android Studio用户可以只添加一个用于com.squareup.picasso：picasso:...
+的依赖，...代表版本号。并且它会拉取其它被Picasso需要的所有其它依赖。
 
+####更新模型
+
+我们原本的数据模型不包含拥有者的信息。因此，我们需要参加我们的数据模型，从而让Retrofit从Stack Exchange Json拉取信息并使之对我们可用。
+
+为此，我们现在有了一个Owner类，含有我们所需的拥有者一个信息：avatar的URL(又名，“profile image):
+
+		package com.commonsware.android.picasso;
+
+		import com.google.gson.annotations.SerializedName;
+
+		public class Owner{
+			@SerializedName("profile_image")String profileImage;
+		}
+
+Stack Exchange API中用于这个的JSON键是profile_image,并且下划线不是在Java成员中隔开单词的常见做法。Java作为代表的是驼峰。
+Retrofit的默认行为需要我们把我们的数据成员命名为profile_image以映射JSON。
+
+但是，表象之下，Retrofit使用的是Google的Gson来从JSON映射到对象。Gson支持一个@SerializedName注解，来指示JSON键使用这个
+数据成员。这允许我吗给予数据成员profileImage更自然的名词，通过使用@SerializedName("profile_image")来教导Gson如何
+填充它的属性。
+
+我们的Item类现在有了一个名叫owner的Owner，因为owner数据是items的JSON对象中的owner键：
+		
+		package com.commonsware.android.picasso;
+
+		public class Item{
+			String title;
+			Owner owner;
+			String link;
+
+			@Override
+			public String toString(){
+				return(title);
+			}
+		}
+
+这两个改变对于Retrofit给予我们下载图片的URL是足够了。
+
+####请求图片
+
+使用Picasso是非常简单的，因为它提供了一个优美自然的接口允许我们在单个Java声明中
+设置一个请求。
+
+这个声明一调用Picasso类的静态with()方法开始，在这个方法中我们提供了一个Context(例如我们的activity)来给Picasso使用。
+声明以into()调用结尾，来指示Picasso记载到哪个ImageView。在这些调用之前，我们可以链接其它调用，因为with()和大都数在Picasso上的其它方法
+会返回Picasso对象本身。
+
+所以，我们可以做一些像这样的事：
+
+		Picasso.with(getActivity()).load(item.owner.profileImage)
+		       .fit().centerCrop()
+		       .placeholder(R.drawable.owner_placeholder)
+		       .error(R.drawable.owner_error).into(icon);
+
+这里，我们:
+
+* 指示我们想要以某一URL记载图片，标识为Item中Owner中的profileImage
+* 告诉图片我们要图片fit()我们的目标ImageView
+* 指定图片调整大小时应该使用centercrop规则
+* 指定某一图片作为图片记载时的占位图片
+* 指定某一图片作为图片加载错误的时图片
+
+就是这样。Picasso启动，下载图片，当准备好的时候把图片注入ImageView。
+
+####故事的剩余部分
+
+Picasso这一点代码在我们新ItemAdapter上的getView()方法中:
+
+		@Override
+		public View getView(int position,View convertView,ViewGroup parent){
+			View row=super.getView(position,convertView,parent);
+			Item item=getItem(position);
+			ImageView icon=(ImageView)row.findViewById(R.id.icon);
+
+			Picasso.with(getActivity()).load(item.owner.profileImage)
+			.fit().centerCrop()
+			.placeholder(R.drawable.owner_profileImage)
+			.error(R.drawable.owner_error).into(icon);
+
+			TextView title=(TextView)row.findViewById(R.id.title);
+
+			title.setText(Html.fromHtml(getItem(positoin).title));
+
+			return(row);
+		}
+
+我们创建了我们自己的行布局(res/layout/row.xml)，包含了一个ImageView和一个TextView。
+我们有ArrayAdapter inflate或recycle我们的行，取回这个布局的Item,从行中取出ImageView，
+使用Picasso开始下载真正的图片，把HTML实体文本填充进TextView，然后返回我们更新的行。当返回行的
+时候，Picasso已经加载好了占位图片，它是在我们下载真实图片时用户最初看到的。
+
+结果是现在在每个我们问题标题的旁边有了图标:
+
+![wizard](/the_busy_coder's_guide/img/figure_267.png)
+
+
+####Volley
 
 ####TODO
 
