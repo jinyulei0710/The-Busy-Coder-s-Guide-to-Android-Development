@@ -1,5 +1,4 @@
-# The-Busy-Coder-s-Guide-to-Android-Development
-The Busy Coder's Guide to Android Development 中文版
+# 给忙碌程序员的Android开发指导（The Busy Coder's Guide to Android Development 中文版）
 
 目录
 
