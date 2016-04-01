@@ -1,7 +1,5 @@
 # 给忙碌程序员的Android开发指导
 
-（The Busy Coder's Guide to Android Development 中文版）
-
 目录
 
   * [前言](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/Preface)
