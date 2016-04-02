@@ -230,6 +230,169 @@ Owner类中的profileImage域。以前，这是包私有的，这就意味着数
 
    
 ####事件处理
+目前为止，我们关注的是使用绑定表达式返回填充控件的数据，具体来说，就是配置控件的样子。
+
+但是如何配置控件的行为呢？
+
+结果是目前涉及到的绑定简单数据同时也可以在控件上绑定事件监听者。主要是因为，ViewBindingAdapter类，是数据绑定类库内部实现的一部分。这个类声明了一打的@BindingMethod和@BindingAdapter注解，其中很多是为了允许你在合成属性上使用绑定表达式来指定事件监听者而设计的。
+
+使用这个是不是一个好主意另说。一方面，它减少了连接控件的样板化Java代码的数量。另一方面，有些然可能担心控制层和表现层的分割线会变得模糊不清。
+
+这点数据绑定系统中的特定功能也遭受了有限文档的问题。心中想着那个,[DataBind/RecyclerView](https://github.com/jinyulei0710/cw-omnibus/tree/master/DataBinding/RecyclerView)样例项目展示了这是如何工作的，以及如何使用数据绑定系统来填充RecyclerView取代AdapterView。
+
+#####转变到RecyclerView/CardView UI
+
+首先，与数据绑定无关的，我们需要把应用迁移到使用RecyclerView。与此同时，我们也可以添加CardView的支持，来让竖直滚动的列表的单个成分看起来是带有圆角和落影的卡片。
+
+为此，我们在我们的build.gradle依赖清单中添加了recyclerview-v7和cardview-v7:
+
+	dependencies{
+	    compile 'org.greenrobot:eventbus:3.0.0'
+        compile 'com.squareup.picasso:picasso:2.5.2'
+        compile 'com.squareup.retrofit2:retrofit:2.0.0'
+        compile 'com.squareup.retrofit2:converter-gson:2.0.0'
+        compile 'com.android.support:recyclerview-v7:23.2.1'
+        compile 'com.android.support:cardview-v7:23.2.1'
+	}
+
+我们之前的样例使用的是ListFragment。我们没有由RecyclerView-v7类库提供的RecyclerViewFragment。但是我们可以有我们自己的，从RecyclerView样例项目复制而来的：
+
+     
+	package com.commonsware.android.databind.basic;
+
+	import android.app.Fragment;
+	import android.os.Bundle;
+	import android.support.v7.widget.RecyclerView;
+	import android.view.LayoutInflater;
+	import android.view.View;
+	import android.view.ViewGroup;
+
+	public class RecyclerViewFragment extends Fragment {
+	  @Override
+ 	 public View onCreateView(LayoutInflater inflater, ViewGroup container,
+	                           Bundle savedInstanceState) {
+ 	   RecyclerView rv=new RecyclerView(getActivity());
+
+  	  rv.setHasFixedSize(true);
+
+   	 return(rv);
+ 	 }
+
+  	public void setAdapter(RecyclerView.Adapter adapter) {
+   	 getRecyclerView().setAdapter(adapter);
+ 	 }
+
+ 	 public RecyclerView.Adapter getAdapter() {
+  	  return(getRecyclerView().getAdapter());
+ 	 }
+
+  	public void setLayoutManager(RecyclerView.LayoutManager mgr) {
+ 	   getRecyclerView().setLayoutManager(mgr);
+ 	 }
+
+  	public RecyclerView getRecyclerView() {
+  	  return((RecyclerView)getView());
+ 	 }
+	}
+	
+所有这个类做的事自己管理一个RecyclerView，包括允许我们自己来操作适配器和布局管理器。
+
+修改过的QuestionsFragment现在继承了RecyclerViewFragment。我们在onViewCreate()中配置了RecyclerView，用的大部分事之前的代码，除了我们也需要调用setLayoutManager()来指示我们想要如何对items进行摆放－在这个情形中，选择的事竖直滚动的列表：
+
+	@Override
+  	  public void onViewCreated(View view,
+         	                     Bundle savedInstanceState) {
+        	super.onViewCreated(view, savedInstanceState);
+
+       	 setLayoutManager(new LinearLayoutManager(getActivity()));
+
+
+        	Call<SOQuestions> call = so.questions("android");
+        	call.enqueue(new Callback<SOQuestions>() {
+          	  @Override
+          	  public void onResponse(Call<SOQuestions> call, 	Response<SOQuestions> response) {
+              	  for (Item item : response.body().items) {
+              	      Question question = new Question(item);
+
+                   	 questions.add(question);
+                  	  questionMap.put(question.id, question);
+               	 }
+
+                setAdapter(new QuestionsAdapter(questions));
+           	 }
+
+            	@Override
+            	public void onFailure(Call<SOQuestions> call, Throwable t) {
+
+           	 }
+        	});
+
+    	}	
+
+
+我们的QuestionsAdapter也需要改变成一个RecyclerView.Adapter,不能再是ArrayAdapter了：
+
+ 	class QuestionsAdapter
+      	      extends RecyclerView.Adapter<QuestionController> {
+        	private final ArrayList<Question> questions;
+
+        	QuestionsAdapter(ArrayList<Question> questions) {
+       	     this.questions = questions;
+       	 }
+
+        	@Override
+        	public QuestionController onCreateViewHolder(ViewGroup parent,
+                                                     int viewType) {
+           	 RowBinding rowBinding =
+             	       RowBinding.inflate(getActivity().getLayoutInflater(),
+                 	           parent, false);
+
+            	return (new QuestionController(rowBinding, this));
+       	 }
+
+       	 @Override
+       	 public void onBindViewHolder(QuestionController holder,
+        	                             int position) {
+        	    holder.bindModel(getItem(position));
+       	 }
+	
+       	 @Override
+       	 public int getItemCount() {
+        	    return (questions.size());
+        	}
+
+        	Question getItem(int position) {
+         	   return (questions.get(position));
+       	 }
+    	}
+
+我们取回了构造器中问题的清单并存放起来以备之后使用。getItemCount()和getItem()仅仅是访问量了问题的清单。数据绑定发生在onCreateViewHolder()中，其中我们创建了RowBinding并使用它来设置了
+QuestionController。QuestionController是一个RecyclerView.ViewHolder的子类,并作为我们列表中用于行的本地控制器－我们很快就会看到QuestionController更多详尽的内容。onBindViewHolder()仅仅是告诉QuestionController来绑定到提供的Question模型对象上。
+
+RecyclerView.ViewHolder需要行的根视图被提供给它的构造器。所以在QuestionController构造器中，我们调用了getRoot()来从RowBinding获取视图并把它提供出来，同时把RowBinding和QuestionsAdapter存放在域中：
+
+	public QuestionController(RowBinding rowBinding,
+        	                    QuestionsFragment.QuestionsAdapter adapter) {
+   	 super(rowBinding.getRoot());
+
+  	  this.rowBinding=rowBinding;
+    	this.adapter=adapter;
+	  }
+
+并且，在bindModel()中，我们使用了RowBinding来绑定我们的问题，所以绑定表达式会把标题，得分等等拉进我们的视图：
+
+	void bindModel(Question question) {
+    	rowBinding.setQuestion(question);
+    	rowBinding.setController(this);
+ 	 }
+
+你会注意到我们也在RowBinding上调用了setController()方法。这是因为我们事件绑定工作的支撑，你会在之后两节中看到。
+
+#####发布事件监听者
+
+
+
+
 ####TODO
 
 
