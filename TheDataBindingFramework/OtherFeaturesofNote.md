@@ -390,8 +390,119 @@ RecyclerView.ViewHolder需要行的根视图被提供给它的构造器。所以
 
 #####发布事件监听者
 
+前面提到的ViewBindingAdapter类为android:onClick和android:onTouch创建了绑定方法，各自取的是onClickListner和onTouchListener。为了绑定监听者，我们需要的是一个能够发布监听者的对象，所以我们可以通过绑定表达式把对象注入到视图上。
 
+在我们的情形中，QuestionController就是发布监听者的那个。
 
+OnclickListener是由controller本身仅仅实现onClickListener接口而进行处理的，onClick()中是我们的事件总线逻辑：
+
+	 	@Override
+ 	 public void onClick(View v) {
+    	Question question=adapter.getItem(getAdapterPosition());
+
+    	EventBus.getDefault().post(new QuestionClickedEvent(question));
+ 	 }
+
+我们可以以相同的方式去处理onTouchListener，但是这个样例阐释了另一种方法：使用了一个公共的静态域：
+
+	public static final View.OnTouchListener ON_TOUCH=
+   	 new View.OnTouchListener() {
+     	 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+     	 @Override
+     	 public boolean onTouch(View v, MotionEvent event) {
+        	if (Build.VERSION.SDK_INT>=
+        	  Build.VERSION_CODES.LOLLIPOP) {
+         	 v
+          	  .findViewById(R.id.row_content)
+            	.getBackground()
+            	.setHotspot(event.getX(), event.getY());
+        	}
+
+       	 return(false);
+      	}
+    	};
+    	
+在这个情形中，我们所需要来处理触摸事件的一切，都是以参数到形式到onTouch()方法中的，这就是为什么一个静态域能有用的原因。
+
+另一个可能就是让一个实例方法返回一个监听者，它在监听者需要来自控制层数据的时候会比较好。
+
+#####应用事件监听者
+
+在这之后，添加监听者到布局资源中就大致上就很平淡了。我们需要一个新的<variable>用于我们的QuestionController,并且我们需要添加android:onClick和android:onTouch属性到LinearLayout上：
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<layout
+ 	 xmlns:android="http://schemas.android.com/apk/res/android"
+ 	 xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  	<data>
+
+   	 <import type="android.text.Html"/>
+
+    	<variable
+     	 name="question"
+      	type="com.commonsware.android.databind.basic.Question"/>
+
+    	<variable
+     	 name="controller"
+      	type="com.commonsware.android.databind.basic.QuestionController"/>
+  	</data>
+
+  	 <android.support.v7.widget.CardView
+     xmlns:cardview="http://schemas.android.com/apk/res-auto"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_margin="4dp"
+     cardview:cardCornerRadius="4dp">
+
+    <LinearLayout
+      android:id="@+id/row_content"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="?android:attr/selectableItemBackground"
+      android:onClick="@{controller}"
+      android:onTouch="@{controller.ON_TOUCH}"
+      android:orientation="horizontal">
+
+      <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/icon"
+        android:layout_height="@dimen/icon"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@string/icon"
+        android:padding="8dip"
+        app:error="@{@drawable/owner_error}"
+        app:imageUrl="@{question.owner.profileImage}"
+        app:placeholder="@{@drawable/owner_placeholder}"/>
+
+      <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:layout_weight="1"
+        android:text="@{Html.fromHtml(question.title)}"
+        android:textSize="20sp"/>
+
+      <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@{Integer.toString(question.score)}"
+        android:textSize="40sp"
+        android:textStyle="bold"/>
+
+    </LinearLayout>
+  </android.support.v7.widget.CardView>
+</layout>
+
+android:onClick的绑定表达式仅仅是@{controller},是因为QuestionController实现了
+OnClickListener接口。
+
+    	    	
 
 ####TODO
 
