@@ -502,7 +502,104 @@ OnclickListener是由controller本身仅仅实现onClickListener接口而进行�
 android:onClick的绑定表达式仅仅是@{controller},是因为QuestionController实现了
 OnClickListener接口。
 
-    	    	
+####类型转换
+
+绑定表达式的结果可以转换成setter,域，或数据绑定系统识别处要使用的绑定适配器。
+
+如果顺利的话，这会奏效。
+
+但是，又可能你会需要改变你的绑定表达式，例如在这章之前提出的情形之中，其中android:text可以接收整型，但是你想要整型以文本的形式展示，而不是对字符串资源的引用。
+
+在其它情形中，可能没有清晰的匹配。Google的文档提出了这么一个例子，这个例子中你的绑定表达式返回了颜色资源的ID,但是setter方法却取了一个Drawable，就如这个情形中视图上的setBackground()方法一样。
+
+解决这个不一致性的一种方法是通过一个@BindingMethod。这会教导数据绑定系统给setter使用不同的方法（例如setBackgroundColor()）。但是，这个总是被特定控件和属性的结合体所使用的。在android:background属性这个特别情形中，有着多个可能的setters:
+
+* setBackgound(Drawable)
+* setBackgroundColor(int)（取的是一个真正的颜色，而不是一个色彩资源）
+* setBackgroundDrawable(Drawable)（API等级16新增的setBackground(Drawable)）
+* setBackgroundResource(int)
+
+你可能不能特定地使用它们其中的某一个。
+
+因此，另一方法是教导数据绑定系统如何将数据从一个类型转换为另一个类型，使用一个@BindingConversion注解的静态方法：
+
+	@BingdingConversion
+	public static ColorDrawable colorToDrawable(int color){
+	  return new ColorDrawable(color);
+	}
+ 
+和绑定适配器一样，方法的名字并不重要。重要的是它取一个整型座位输入并返回了一个ColorDrawable。
+数据绑定系统会记住这个并在绑定表达式返回整型和它需要一个ColorDrawable..或一个Drawable的时候使用。
+
+这里，尽管我们开始跑进了Google坚持在到处使用int值而引发的问题。这个colorToDrawable()转换方法取的是一个整型。这个整型可能是一个颜色。它可能是颜色资源ID，或者是一个字符串资源ID,或者是布局资源ID,或者是Stack Overflow问题的得分，又或者是其它数不清的东西。描述的@BindingConversion，因此，可能不会特别有用。
+
+另一种使用@BindingConversion的情形是能够从模型深处获取一些东西而不用把整个模型结构暴露成公共的。例如，[DataBinding/Conversion]()样例项目使用了一个@BindingConversion，通过返回profileImage值的方式来允许Owner转变成一个字符串：
+
+    @BingdingConversion
+    public static String ownerToString(Owner owner){
+       return(owner.profile);
+    }
+
+再一次的，方法名并不重要，重要的是这个转换知道如何处理取得一个Owner并返回一个字符串。
+
+现在，布局中ImageView中app:imageUrl属性可以引用question.owner而不是question.owner.profileImage了:
+    
+     <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/icon"
+        android:layout_height="@dimen/icon"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@string/icon"
+        android:padding="8dip"
+        app:error="@{@drawable/owner_error}"
+        app:imageUrl="@{question.owner}"
+        app:placeholder="@{@drawable/owner_placeholder}"/>
+        
+        
+####自定义绑定类名
+
+正如之前在这章提到的，用于布局资源的绑定类名是默认自动决定的。布局文件名转换成了帕斯卡拼写法，然后附加了Binding（例如，res/layout/foo_bar.xml变成了FooBarBinding）。这个类到了你应用包名的.databind子包之下，而这个包名和在你的<manifest>中定义的package属性一样。
+
+但是，这可能造成Java类名的尴尬。或者，由于某种原因你可能想要把类生成在其它Java包中。你可以使用<data>元素上的classs属性来控制被用于绑定类的真实Java类名。
+
+可以以以下三种形式中的一种出现：
+
+* class="Foo"会把绑定类命名成Foo并会把它放在标准的.databinding子包中
+* class=".Foo"会把绑定类命名成Foo并放在你应用基包的下面，而不是在单独的.databinding子包下。
+* class=this.is.fully.qualified.Foo"会把绑定类命名成Foo并把它放进指定的Java包中。
+
+####扩展include句法
+
+Android从1.0开始就在布局资源中支持<include>标签了。这个标签取的是一个layout属性，引用的是一个layout资源。所指向的布局资源内容插入到了原本资源的视图层级中。所以，我们有：
+	
+	<LinearLayout xmlns:android:"http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<include layout="@layout/foo"/>
+	<!--other widgets go here-->
+	</LinearLayout>
+
+...然后不管foo布局中有什么都会添加到LinearLayout中，在LinearLayout其它控件之前。
+
+使用数据绑定系统，你可以把变量从外部布局传到包含的那个布局中，而不用从Java代码层面不知以某种方式绑定变量到所包含的布局上：
+
+	<layout xmlns:android:"http://schemas.android.com/apk/res/android"
+     	   xmlns:bind="http://schemas.android.com/apk/res-auto"
+     <data>
+          <variable name="foo" type="com/thingy.Foo"/>
+      </data>
+      
+      <LinearLayout xmlns:android="http:schemas.android.com/apk/res/android"
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+       <include layout="@layout/foo" bind:bar="@{foo}"       	   	<!--other widget go here-->
+       </LinearLayout>
+       </layout>
+
+这里，如果foo布局资源有一个变量叫做bar的话，它会由以评估@{foo}绑定表达式的方式填充进去，
+那么foo资源就能引用到它自己绑定表达式中的bar了。
 
 ####TODO
 
