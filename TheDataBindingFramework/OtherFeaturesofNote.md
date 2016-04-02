@@ -71,6 +71,165 @@
 
 ####使用不同的方法
 
+当然，找到一个setter方法可能是个挑战。经常，属性名和setter名汇遵循描述约束（android:foo映射setFoo()）。尽管如此，时不时地属性名和setter名会不同。
+
+例如，View有一个android:fadeScroolbars属性用来决定当控件不滚动的时候是否应该自动褪去scrobars。但是，相关的setter方法不是setFadeScroolbars(),而是setScroolbarFadingEnabled()。默认情况，理论上来说，数据绑定系统不会找到为android:fadeScroolBars找到合适的setter方法。
+
+实际上，文档表明Google已经修复了所有来自Android 框架类的标准属性。但是，可能有缺口，特别在Android支持提供的类中，更不用说第三方控件了。
+
+为了克服attribute/setter对不匹配的问题，你可以教导数据绑定系统如何找到给属性的setter方法。
+为了完成这个工作，你是应当能够定义一个类级别的@BindingMethod注解，其中包含一个或多个@BindingMethod注解，它相应地把一个属性映射到一个setter方法名：
+
+	@BindingMethod(
+	   @BindingMethod(type="android.view.View",
+	                   attribute="android:fadeScrollBars"
+	                   method="setScroolbarFadingEnabled"),
+	   })
+
+####绑定适配器，和Picasso情景
+
+有时候，即使这么做也是不够的。可能setter方法取了额外的参数，尽管在你的情形中它们可以简单地进行硬编码或从控件其它地方拉取。可能“setter方法”不是真正地在设置属性，但是安排做一些与属性相关的工作。
+
+例如，目前为止，我们还没有能够在ImageView上使用数据绑定。虽然图片的URL是与android:src属性相关的，但是android:src并不接收一个URL，并且反正是要使用Picasso来异步取回图片的。因此我们被迫接受在getView()以老式的方法来配置ImageView，取回ImageView然后告诉Picasso如何填充它。
+
+但是，绑定系统也能通过定义一个自定义@BindingAdapter来处理这个问题。
+
+让我们看看[DataBind/Picasso](https://github.com/jinyulei0710/cw-omnibus/tree/master/DataBinding/Picasso)样例项目。这个项目是基于之前的Scored样例的，但是现在使用了
+数据绑定系统来更新ImageView。
+
+稍早出现的ImageView XML出现在了我们修改过的row.xml布局资源中:
+
+    <?xml version="1.0" encoding="utf-8"?>
+	<layout
+ 	 xmlns:android="http://schemas.android.com/apk/res/android"
+ 	 xmlns:app="http://schemas.android.com/apk/res-auto">
+
+ 	 <data>
+
+   	 <import type="android.text.Html"/>
+
+   	 <variable
+      name="question"
+      type="com.commonsware.android.databind.basic.Question"/>
+  	 </data>
+
+    <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal">
+
+    <ImageView
+      android:id="@+id/icon"
+      android:layout_width="@dimen/icon"
+      android:layout_height="@dimen/icon"
+      android:layout_gravity="center_vertical"
+      android:contentDescription="@string/icon"
+      android:padding="8dip"
+      app:error="@{@drawable/owner_error}"
+      app:imageUrl="@{question.owner.profileImage}"
+      app:placeholder="@{@drawable/owner_placeholder}"/>
+
+    <TextView
+      android:id="@+id/title"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_gravity="left|center_vertical"
+      android:layout_weight="1"
+      android:text="@{Html.fromHtml(question.title)}"
+      android:textSize="20sp"/>
+
+    <TextView
+      android:id="@+id/score"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_vertical"
+      android:layout_marginLeft="8dp"
+      android:layout_marginRight="8dp"
+      android:text="@{Integer.toString(question.score)}"
+      android:textSize="40sp"
+      android:textStyle="bold"/>
+
+     </LinearLayout>
+     </layout>
+
+这里我们有三个合成属性：属性不是真正ImageView的一部分，但是我们我们借助了数据绑定系统。
+
+为了这个能奏效，数据绑定系统必须知道对这三个值做什么。ImageView缺少这些的setter方法(),
+所以在没有其它东西时，数据绑定系统会触发编译错误，控诉它不知道要对我们布局中的值做什么。
+
+为了这个能奏效，我们需要在某处放一个带着@BindingAdapter注解静态的方法。在这个情形中，我们在QuestionsFragment中定义了它：
+
+      @bindingAdapter({"app:imageUrl","app:placeholder","app:error"})
+      public static void bindImageView(ImageView iv,
+                                    String url,
+                                    Drawable placeholder,
+                                    Drawable error){
+         Picasso.with(iv.getContext())
+                .load(url)
+                .fit()
+                .centerCrop()
+                .placeholder(placeholder)
+                .error(error)
+                .into(iv);                              
+       }
+
+方法名并不重要，所以把它命名成能提醒你它的职责就行。它需要返回void,并取得如下参数:
+
+* 合成属性会出现在的视图类型(在此例中，ImageView)
+* 这些属性的值，以它们出现在@BindingAdapter注解字符串列表中的顺序
+
+在我们的情形中，app:placeholder和app:error是解析至Drawable资源的，而app:imageUrl
+是解析至字符串的。
+
+这个声明教导数据绑定系统在它找到一个带着合成属性列表的指派类型视图的任意时间调用这个方法，而不用尝试找到这些属性的setter方法。因为当我们布局文件中的<ImageView>元素满足这些条件的时候，bindImageView()方法就会调用。
+
+在这个方法中，就是我们的职责去做无论我们需要做的事情去摄入这些合成属性值然后应用它们的结构到提供的视图上。但是，之前，drawable的值（placeholder和error）在Java中是硬编码的。现在，它们处于布局XML文件中，这个就有了更多的灵活性，特别是当我们为不同配置使用不同布局资源的时候。
+
+这就意味着我们可以丢弃来自getView()的手工绑定代码，只剩下我们ArrayAdapter到RowBinding的连接操作。
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+      RowBinding rowBinding=
+        DataBindingUtil.getBinding(convertView);
+
+      if (rowBinding==null) {
+        rowBinding=
+          RowBinding.inflate(getActivity().getLayoutInflater(),
+            parent, false);
+      }
+
+      rowBinding.setQuestion(getItem(position));
+
+      return(rowBinding.getRoot());
+    }
+
+注意，尽管如此，为了能够让这个样例奏效，我们需要做另一处改变。app:imageUrl引用了
+Owner类中的profileImage域。以前，这是包私有的，这就意味着数据绑定生成代码不能访问它。
+取而代之的，我们必须使它成为公共的：
+    
+      package com.commonsware.android.databind.basic;
+
+     import com.google.gson.annotations.SerializedName;
+
+      public class Owner {
+        public @SerializedName("profile_image") String profileImage;
+       }
+
+作为一个附加特性，绑定适配器不仅能接受属性的新值，而且也能接受旧的（也就是说，在前一个绑定中使用过的）。为了使这个能奏效，你把除了视图之外的参数所有参数加倍。首先是旧的值，然后是新的值。如果我们想要在这节展示这个样例中使用的话，我们总共需要七个参数：
+
+	@BindingAdapter({"app:imageUrl","app:placeholder","app:error"}){
+	      public static void bindImageView(ImageView iv,
+	                    String oldUrl,
+	                    Drawable oldPlaceholder,
+	                    Drawable oldError,
+	                    String newUrl,
+	                    Drawable newPlaceholder,
+	                    Drawable newError){
+	    //do good sutff here                
+	  }
+
+   
+####事件处理
 ####TODO
 
 
