@@ -41,7 +41,7 @@
 * 富文本
 * 动画
 * 旧式动画
-* [自定义绘图](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/CustomDrawables)
+* [自定义`Drawables`](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/CustomDrawables)
 * 使用`Maps V2`绘制地图
 * 手工制作你自己的视图
 * 高级`Preference`
