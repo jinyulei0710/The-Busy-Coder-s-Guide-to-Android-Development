@@ -687,7 +687,7 @@ Android从1.0开始就在布局资源中支持<include>标签了。这个标签�
 如果BaseObservable本身是在绑定表达式中使用的，或者你想要使用bindable属性并需解决以上提到的BR问题，BaseObservable也提供了notifyChange(),指示所有绑定到BaseObservable实例的绑定表达式应该重新评估。
 
 
-[DataBinding/Observable]()样例项目是同一个我们已经在这章中分析过的这个样例项目的另一个变种。这个样例让Question扩展了BaseObservable。但是，不像以上的代码片段，其中我们尝试的使用notifyPropertyChanged()，这是我们仅仅勉强接受了notifyChange():
+[DataBinding/Observable](https://github.com/jinyulei0710/cw-omnibus/tree/master/DataBinding/Observable)样例项目是同一个我们已经在这章中分析过的这个样例项目的另一个变种。这个样例让Question扩展了BaseObservable。但是，不像以上的代码片段，其中我们尝试的使用notifyPropertyChanged()，这是我们仅仅勉强接受了notifyChange():
 
 
 	package com.commonsware.android.databind.basic;
