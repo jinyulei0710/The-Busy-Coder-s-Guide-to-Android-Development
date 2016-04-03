@@ -13,7 +13,7 @@
 
 目录：
 * [准备工作](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/TheDataBindingFramework/Prerequisites.md)
-* [什么，现在？](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/TheDataBindingFramework/TheWhatNow.md)
+* [现在要做什么呢？](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/TheDataBindingFramework/TheWhatNow.md)
 * [基本步骤](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/TheDataBindingFramework/TheBasicSteps.md)
 * [扩展的布局资源](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/TheDataBindingFramework/TheExtendedLayoutResource.md)
 * [绑定表达式语言](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/TheDataBindingFramework/TheBindingExpressionLanguage.md)
