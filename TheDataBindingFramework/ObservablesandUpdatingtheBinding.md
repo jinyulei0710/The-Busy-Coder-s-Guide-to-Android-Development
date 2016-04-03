@@ -41,9 +41,9 @@
 
 一方面，这不需要很复杂。例如，这就有一个来自数据绑定支持库的ObservableBoolean的实现。
 
-大量代码处理的是ObservableBoolean的[Parcelable序列化]()。从BaseObservable的角度看，关键是调用在set()方法中的notifyChange()。这告诉BaseObservable告诉所有的观察者这个被观察中的东西改变了，如果它们是和这个被观察者绑定的，它们应该去做一些事情。通常来说，“做一些事”会是重新评估绑定表达式并且更新视图的属性，例如更新TextView的文本信息，其中绑定表达式被使用在android:text属性中。
+大量代码处理的是ObservableBoolean的[Parcelable序列化](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/WritingandUseParcelables)。从BaseObservable的角度看，关键是调用在set()方法中的notifyChange()。这告诉BaseObservable告诉所有的观察者这个被观察中的东西改变了，如果它们是和这个被观察者绑定的，它们应该去做一些事情。通常来说，“做一些事”会是重新评估绑定表达式并且更新视图的属性，例如更新TextView的文本信息，其中绑定表达式被使用在android:text属性中。
 
-但是，创建更为复杂的自定义被观察者就没有在文档中特别说明了，我们[这章之后内容]()查看。
+但是，创建更为复杂的自定义被观察者就没有在文档中特别说明了，我们将在这章之后内容查看。
 
 ####一个可观察样例
 
