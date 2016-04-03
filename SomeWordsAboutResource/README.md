@@ -17,7 +17,7 @@
 
 目录
 
-* 字符串理论
+* [字符串理论](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/SomeWordsAboutResource/StringTheory.md)
 * 得到图片了？
 * 尺寸
 * 还不应被命名的资源
