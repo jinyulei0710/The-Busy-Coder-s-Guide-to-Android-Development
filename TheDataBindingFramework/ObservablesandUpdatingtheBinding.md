@@ -132,7 +132,7 @@
 	
 它持有和Item一样的五个值，除了现在title和score现在是分别是通过Observable和ObservableInt创建的，是可观察的。onwer,link和id值应该是不可改变的，反正我们没有在它们上进行绑定，所以保持为普通的域就好了。
 
-Questionyou一个构造器和一个updateFromItem()方法都是从Item把数据复制到Question中去。updateFromItem()处理了两个可观察域，我们会在最终获取问题更新的时候使用这个方法。	
+Question有一个构造器和一个updateFromItem()方法都是从Item把数据复制到Question中去。updateFromItem()处理了两个可观察域，我们会在最终获取问题更新的时候使用这个方法。	
 QuestionsFragment现在有了一个更为恰当的名字，因为现在会用它来展示问题对象的列表。此外，这需要对QuestionsAdapter进行修改，从处理Item对象换成处理Question对象：
 
 		class QuestionsAdapter extends ArrayAdapter<Question>{
