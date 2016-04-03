@@ -1,6 +1,6 @@
 ####现在干什么呢？
 
-在网络访问那一章中，我们查看了一些从StackOverflow获取最新问题并展示在ListView的样例应用的变种。我们的QuestionsFragmentyou一个填充ListView的ItemsAdapter，有着一个典型的getView()实现：
+在网络访问那一章中，我们查看了一些从StackOverflow获取最新问题并展示在ListView的样例应用的变种。我们的QuestionsFragment有着一个填充ListView的ItemsAdapter，有着一个典型的getView()实现：
 
 		class ItemAdapter extends ArrayAdapter<Item>{
 		  ItemsAdapter(List<Item> items){
