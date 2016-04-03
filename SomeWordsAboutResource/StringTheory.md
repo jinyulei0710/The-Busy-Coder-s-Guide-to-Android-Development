@@ -56,6 +56,12 @@ text元素：
         </manifest>
 
          
+这里，<application>元素中的android:label属性引用了app_name字符串资源。这个会出现在应用程序的几个地方，
+尤其是设置中的已安装程序列表。所以，如果你想要改变你应用名如何在这些地方显现，只要挑战app_name字符串资源就能满足。
+
+@string／app_name语句告诉Android"找到叫做app_name的字符串资源"。这导致Android扫描合适的strings.xml文件(或你的res/values/目录下其它
+包含字符串资源的文件)来尝试找到app_name。
+
 
 
 
