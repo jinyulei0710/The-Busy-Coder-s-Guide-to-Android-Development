@@ -17,5 +17,5 @@
 * [基本步骤](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/TheDataBindingFramework/TheBasicSteps.md)
 * [扩展的布局资源](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/TheDataBindingFramework/TheExtendedLayoutResource.md)
 * [绑定表达式语言](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/TheDataBindingFramework/TheBindingExpressionLanguage.md)
-* [观察者和更新绑定](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/TheDataBindingFramework/ObservablesandUpdatingtheBinding.md)
+* [可观察量和更新绑定](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/TheDataBindingFramework/ObservablesandUpdatingtheBinding.md)
 * [其它需要注意的属性特征](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/TheDataBindingFramework/OtherFeaturesofNote.md)
