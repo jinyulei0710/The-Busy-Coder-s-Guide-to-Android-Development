@@ -601,6 +601,184 @@ Android从1.0开始就在布局资源中支持<include>标签了。这个标签�
 这里，如果foo布局资源有一个变量叫做bar的话，它会由以评估@{foo}绑定表达式的方式填充进去，
 那么foo资源就能引用到它自己绑定表达式中的bar了。
 
-####TODO
+####自定义可观察量
+
+你所需要的可能不能匹配所有这些模式。在这样的情形下，你不得不自立更生地自己实现你自己的可观察量。最简单的做法是扩展BaseObservable，它为了处理了所有的观察者注册逻辑。
+
+有两种类型的改变你可以用于通知观察者：
+
+* 属性的改变，这可以通过以上描述的单个属性观察者，例如ObservableField进行处理
+* 模型本身本质方面的改变，这个不能以对某个属性的简单Observable封装获取。
+
+例如，你可能有一个Date类型的birthDate域，代表那个人出生的日期。如果你想要在绑定表达式中使用这个日期的话，你可以让birthDate成为公开的，或者让一个getBirthDate()返回它。如果你想绑定表达式在birth date改变的时候被更新，你可以让birthDate成为一个封装Date的可观察域。
+
+但是，假定你真正想在绑定表达式中使用的是人的年龄。对于Person类来说基于当前的日期和生日计算年龄是挺容易的。但是，这个通过一个可观察域发布就有点尴尬，因为应该没有一个age域－age是一个派生的值，不是一个存储的值。取代之的，你可以说你的getAge()方法发布了一个简单的整型，并且在任何年龄改变的时候你会去处理通知观察者的事情，要么是birthDate改变的原因，或者是日期改变了并且现在是那个人的生日的原因。
+
+#####可绑定属性
+
+在一个BaseObserverable上，你可以使用@Bindable注解getter样式的方法。这告诉数据绑定框架这些方法代表的值可以被绑定。因为BaseObservable实现了Observable，数据绑定系统可以调用addOnPropertyChangeCallback()来注册一个onProperyChangeCallback回调来找出当@Bindable属性被改变的时候。为了能够让这个奏效，BaseObservable提供了一个notifyPropertyChanged()方法。你可以从setter方法或其它你改变属性值的地方调用这个方法，让BaseObservable知道属性改变了。这个，反过来，会让所有的OnPropertyChangeCallback实例知道这个改变，这会触发数据绑定系统让其重新评估绑定到这个属性的所有绑定表达式。
+
+不幸的是，这个在Android Studio 1.5.1版和1.5.0版的Gradle Android 插件中是损坏的。
+
+	package com.commonsware.android.databind.basic;
+
+	import android.databinding.BaseObservable;
+	import android.databinding.Bindable;
+	import android.databinding.ObservableField;
+	import android.databinding.ObservableInt;
+	import com.commonsware.android.databind.basic.BR;
+
+	public class Question extends BaseObservable {
+  	private String title;
+  	private final Owner owner;
+  	private final String link;
+  	private int score;
+  	private final String id;
+
+ 	 Question(Item item) {
+   	 updateFromItem(item);
+   	 owner=item.owner;
+   	 link=item.link;
+   	 id=item.id;
+  	}
+
+ 	 @Bindable
+  	public String getTitle() {
+   	 return(title);
+  	}
+
+ 	 @Bindable
+  	public Owner getOwner() {
+   	 return(owner);
+  	}
+
+ 	 @Bindable
+  	public String getLink() {
+  	  return(link);
+ 	 }
+
+ 	 @Bindable
+ 	 public int getScore() {
+   	 return(score);
+ 	 }
+
+ 	 @Bindable
+ 	 public String getId() {
+  	  return(id);
+  	}
+
+ 	 void updateFromItem(Item item) {
+  	  this.title=item.title;
+   	 this.score=item.score;
+
+   	 notifyPropertyChanged(BR.title);
+   	 notifyPropertyChanged(BR.score);
+  	}
+	}
+
+这里，BR是一个生成的类。根据文档：
+
+   可绑定注解在编译期间在BR类中生成了一个条目。BR类文件会生成在模块包中。
+
+不幸的是，尽管这都是真的，Android Studio并不会识别任何生成的域，并且当你导入BR,BR.title和BR.score－标识这些属性的整型值－没有被识别并导致编译错误。Android Studio 2.0就不会报错了。
+
+####关于本质改变的通知
+
+如果BaseObservable本身是在绑定表达式中使用的，或者你想要使用bindable属性并需解决以上提到的BR问题，BaseObservable也提供了notifyChange(),指示所有绑定到BaseObservable实例的绑定表达式应该重新评估。
+
+
+[DataBinding/Observable]()样例项目是同一个我们已经在这章中分析过的这个样例项目的另一个变种。这个样例让Question扩展了BaseObservable。但是，不像以上的代码片段，其中我们尝试的使用notifyPropertyChanged()，这是我们仅仅勉强接受了notifyChange():
+
+
+	package com.commonsware.android.databind.basic;
+
+	import android.databinding.BaseObservable;
+	import android.databinding.Bindable;
+	import android.databinding.ObservableField;
+	import android.databinding.ObservableInt;
+	import com.commonsware.android.databind.basic.BR;
+
+	public class Question extends BaseObservable {
+ 	 private String title;
+  	 private final Owner owner;
+  	 private final String link;
+ 	 private int score;
+ 	 private final String id;
+
+  	Question(Item item) {
+    	updateFromItem(item);
+    	owner=item.owner;
+    	link=item.link;
+    	id=item.id;
+  	}
+
+  	@Bindable
+  	public String getTitle() {
+   	 return(title);
+  	}
+
+  	@Bindable
+  	public Owner getOwner() {
+   	 return(owner);
+  	}
+
+ 	 @Bindable
+  	public String getLink() {
+   	 return(link);
+  	}
+
+  	@Bindable
+  	public int getScore() {
+   	 return(score);
+ 	 }
+
+  	@Bindable
+  	public String getId() {
+  	  return(id);
+  	}
+
+  	void updateFromItem(Item item) {
+   	  this.title=item.title;
+      this.score=item.score;
+
+      notifyChange();
+      }
+    }
+   	
+即使我们把标题存储成一个简单的字符串，得分存储成整型，我们可以在绑定表达式中使用它们，因为它们的getter是@Bindable的，我们在它们的值改变的时候通知了BaseObservable。
+
+####不要让思维局限
+
+数据绑定会被TextView的文本又或是展示在ImageView中展示的图片所使用的。但是，你是被欢迎使用其它基于绑定表达式的。例如，可能你想要列表中的一行有着确定的背景色或颜色条，基于与模型对象相关的某些种类。你可以使用数据绑定来设置颜色。
+
+Lisa Wray指出了另外一种有创造力的数据绑定的使用方式：自定义字体。
+
+过去，使用一个自定义的字体需要Java代码。Java代码可能有一定程度上的限制，如果你只需要更新一个
+TextView。或者，Java代码会拉入一个像[Calligraphy](https://github.com/chrisjenx/Calligraphy)这样的类库，然后能够在布局文件中应用随意的字体到随意的控件上。
+
+数据绑定可以为你处理这个问题，如果你为某个合成属性创建了一个自定义的BindingAdapter(例如，wray:font)。在你的布局中，
+你可以让命名字体的wray:font属性出现在你想要相关的控件之上(例如，TextView):
+
+<TextView
+  wray:font="@{`MgOpenCosmetica.tff`}"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"/>
+
+BindingAdapter会取回这个字体名的字体，然后把它应用到相关的控件上:
+
+	@BindingAdapter({"wray:font"})
+	public static void setFont(TextView tv,String font){
+		String assetPath="fonts/"+font;
+		Typeface type=Typeface.createFromAsset(tc.getContext().getAssets(),assetPath);
+
+		tv.setTypeface(type);
+	}  
+
+这个特定的实现有一个性能问题，因为它在每个绑定上创建了创建了一个新的Typeface对象，这是无效率的。
+Lisa有[一个完整的样例应用](https://github.com/lisawray/fontbinding)示范了缓存Typeface减少性能开销。
+
+很可能Android社区会想出其它有意思的有关于使用奇特的数据绑定适配器，转换器以及类似的用于简化代码的策略。
+
+
 
 
