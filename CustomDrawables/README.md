@@ -15,7 +15,7 @@ pressed,focused,disabled，等等.)。Android有着特定类型的drawable资源
 
 目录
 
-* 准备工作
+* [准备工作](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/CustomDrawables/Prerequisites.md)
 * 这些东西到哪里去了？
 * ColorDrawable
 * AnimationDrawable
