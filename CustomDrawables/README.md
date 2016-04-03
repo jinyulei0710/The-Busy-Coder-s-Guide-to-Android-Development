@@ -1,4 +1,4 @@
-## 自定义绘图
+## 自定义`Drawables`
 
 很多时候，我们的图片可以仅仅是一些PNG或JPEG文件，不同密度资源文件下各不相同。
 
@@ -13,4 +13,24 @@ pressed,focused,disabled，等等.)。Android有着特定类型的drawable资源
 
 在本章中，我们会探索这些非传统类型的drawables并且告诉你如何在你的应用中使用。
 
-###TODO
+目录
+
+* 准备工作
+* 这些东西到哪里去了？
+* ColorDrawable
+* AnimationDrawable
+* ColorDrawable
+* AnimationDrawable
+* StateListDrawable
+* ColorStateList
+* LayerDrawable
+* TransitionDrawable
+* LevelListDrawable
+* `ScaleDrawable`和`ClipDrawable`
+* InsetDrawable
+* 矢量
+* ShapeDrawable
+* VectorDrawable
+* BitmapDrawable
+* 合成`Drawables`
+* 小洞不补大洞吃苦
