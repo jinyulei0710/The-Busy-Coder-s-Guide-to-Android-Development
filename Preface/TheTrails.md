@@ -11,7 +11,7 @@
 * 清单合并规则
 * 应用签名]
 * 发行
-* 针对`Android`的高级`Gradle`小窍门]
+* 针对`Android`的高级`Gradle`小窍门
 
 ####测试
 * JUnit和Android
@@ -56,4 +56,49 @@
 * [数据绑定](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/TheDataBindingFramework)
 * 桌面`Android`应用
 
+####主页面效果
+*主页面控件
+*基于适配器的应用控件
+
+####数据存储和检索
+* 内容提供者理论
+* 内容提供者实现模式
+* 加载框架
+* `ContactsContract`提供者
+* `CelendarContract`提供者
+* `MediaStore`提供者
+* 使用文档
+* 提供文档
+* 加密存储
+* 打包和分发数据
+* 高级数据库技巧
+* 数据备份
+
+####高级网络主题
+*SSL
+*嵌入网站服务
+*多种多样的网络功能
+
+####`Media`
+*音频播放
+*音频录制
+*视频播放
+*通过第三方应用使用相机
+*直接使用相机
+*`MediaStore`提供者
+*媒体路由
+*支持外部播放
+*`Google Cast`和`ChromeCast`
+* 10英寸UI
+* 把所有电视放在一起:`Decktastic`
+* 创建一个媒体路由提供者
+* 截屏和屏幕录制
+
+####安全
+*SSL
+*加密存储
+*高级权限
+*`RestrictedProfiles`和`UserManager`
+*触屏劫持
+*多种多样的安全技术
 ####TODO
