@@ -62,8 +62,45 @@ text元素：
 @string／app_name语句告诉Android"找到叫做app_name的字符串资源"。这导致Android扫描合适的strings.xml文件(或你的res/values/目录下其它
 包含字符串资源的文件)来尝试找到app_name。
 
+####样式文本
+
+许多Android中的东西可以显示富文本，其中文本使用一些轻量化的HTML标记:<b>,<i>和<u>进行了格式化处理。
+你的字符串资源仅仅以你在网页中使用HTML标签的方式支持了这个。
+
+      <resources>
+        <string name="b">This has<b>bold</b>in it.</string>
+        <string name="i">Whereas this has <i>italics</i>!</string>
+      </resouces>
 
 
+CDATA.CDATA 跑起来。跑起来，DATA,跑起来
+
+因为字符串串资源文件是一个XML文件，如果你的信息中包好了<,>或&字符(以及上述列出的格式化标签)，
+你会需要使用一个`CDATA section`:
+
+    <string name="report_body">
+    <![CDATA[
+    <html>
+    <body>
+    <h1>TPS Report for :{{reportDate}}</h1>
+    <p>Here are the contents of the TPS report:</p>
+    <p>{{message}}</p> 
+    <p>If you have any questions reguarding this report,please
+    do <b>not</b> ask Mark Murphy.</p>
+    </body>
+    </html>
+    ]]>
+    </string>
+
+####目录名
+
+在我们存根项目中的字符串资源是位于res/values/strings.xml文件中的。因为这个目录名
+没有后缀，在这个文件夹下的字符串资源在任何情形下都是有效的，包含所有的设备地点。
+我们会需要附加的有着不同strings.xml文件的目录，来支持其它语言。我们会在这[本书之后内容]()涵盖到如何去做.
+
+####编辑文件资源
+
+如果你在一个字符串资源文件上双击，像res/values/strings.xml。在AndroidStudio中，XML会呈现在出来然后就能修改了。
 
 
 
