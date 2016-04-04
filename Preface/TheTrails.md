@@ -96,10 +96,10 @@
 * 截屏和屏幕录制
 
 ####安全
-*SSL
-*加密存储
-*高级权限
-*`RestrictedProfiles`和`UserManager`
-*触屏劫持
-*多种多样的安全技术
+* SSL
+* 加密存储
+* 高级权限
+* `RestrictedProfiles`和`UserManager`
+* 触屏劫持
+* 多种多样的安全技术
 ####TODO
