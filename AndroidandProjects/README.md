@@ -3,3 +3,8 @@
 
 开始一个项目的细节根据你所使用的集成开发环境会有不同，所以这章伴随着多种可能性。
 
+目录
+
+* [常见的概念](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/AndroidandProjects/CommonConcepts.md)
+* [项目和Android Studio](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/AndroidandProjects/ProjectandAndroidStudio.md)
+* [初始项目生成器](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/AndroidandProjects/StarterProjectGenerators.md)
