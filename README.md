@@ -14,7 +14,7 @@
     * [知识共享和42F保证](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Preface/CC%2642FG.md)
     * [感谢](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Preface/Acknowledgment.md)
   * [关键Android概念](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/KeyAndroidConcepts)
-    *[Android应用](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/KeyAndroidConcepts/AndroidApplications.md)
+    * [Android应用](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/KeyAndroidConcepts/AndroidApplications.md)
     * [Android设备](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/KeyAndroidConcepts/AndroidDevices.md)
     * [不要害怕](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/KeyAndroidConcepts/Don'tBeScared.md)
   * 选择你的开发工具链
