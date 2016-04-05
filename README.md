@@ -37,4 +37,14 @@
  * [项目和Android Studio](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/AndroidandProjects/ProjectandAndroidStudio.md)
  * [初始项目生成器](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/AndroidandProjects/StarterProjectGenerators.md)
 
+* 教程#2-创建一个存根项目
+ * 关于我们的教程项目
+ * 关于教程的其余部分
+ * 关于我们的工具
+ * 步骤#1：创建项目
+ * 步骤#2：设置模拟器
+ * 步骤#3：设置设备
+ * 步骤#4：运行项目
+ * 下集预告...
+
 ####TODO   
