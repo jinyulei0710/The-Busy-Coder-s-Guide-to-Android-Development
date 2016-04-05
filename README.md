@@ -17,13 +17,13 @@
     * [Android应用](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/KeyAndroidConcepts/AndroidApplications.md)
     * [Android设备](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/KeyAndroidConcepts/AndroidDevices.md)
     * [不要害怕](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/KeyAndroidConcepts/Don'tBeScared.md)
-  * 选择你的开发工具链
-    * Android Studio
-    * Eclipse
-    * IntelliJIDEA
-    * 通过Android的Gradle命令行创建
-    * 还要其它选择
-    * 集成开发环境和这本书
-    * 我们没有包含的内容
+  * [选择你的开发工具链](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/ChoosingYourDevelopmentToolchain)
+    * [Android Studio](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ChoosingYourDevelopmentToolchain/androidstudio.md)
+    * [Eclipse](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ChoosingYourDevelopmentToolchain/eclipse.md)
+    * [IntelliJIDEA](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ChoosingYourDevelopmentToolchain/intelli_idea.md)
+    * [通过Android的Gradle命令行创建](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ChoosingYourDevelopmentToolchain/C-LBuildviaGradleforAndroid.md)
+    * [还要其它选择](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ChoosingYourDevelopmentToolchain/YetOtherAlternatives.md)
+    * [集成开发环境和这本书](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ChoosingYourDevelopmentToolchain/IDEs...AndThisBook.md)
+    * [我们没有包含的内容](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ChoosingYourDevelopmentToolchain/WhatWeAreNotCovering.md)
     
 ####TODO   
