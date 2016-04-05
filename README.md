@@ -25,7 +25,6 @@
     * [还要其它选择](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ChoosingYourDevelopmentToolchain/YetOtherAlternatives.md)
     * [集成开发环境和这本书](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ChoosingYourDevelopmentToolchain/IDEs...AndThisBook.md)
     * [我们没有包含的内容](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ChoosingYourDevelopmentToolchain/WhatWeAreNotCovering.md)
-    
 * [教程#1-安装工具](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/Tutorial%231-InstallingtheTools)
  * [步骤#1-检查你的硬件需求](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%231-InstallingtheTools/Step%231-CheckingYourHardwareRequirements.md)
  * [步骤#2-设置Java和32位Linux支持](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%231-InstallingtheTools/Step%232-SettingUpJavaand32-BitLinuxSupport.md)
@@ -36,14 +35,14 @@
  * [常见的概念](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/AndroidandProjects/CommonConcepts.md)
  * [项目和Android Studio](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/AndroidandProjects/ProjectandAndroidStudio.md)
  * [初始项目生成器](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/AndroidandProjects/StarterProjectGenerators.md)
-* 教程#2-创建一个存根项目
- * 关于我们的教程项目
- * 关于教程的其余部分
- * 关于我们的工具
- * 步骤#1：创建项目
- * 步骤#2：设置模拟器
- * 步骤#3：设置设备
- * 步骤#4：运行项目
- * 下集预告...
+* [教程#2-创建一个存根项目](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/Tutorial%232-CreatingaStubProject)
+ * [关于我们的教程项目](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%232-CreatingaStubProject/AboutOurTutorialProject.md)
+ * [关于教程的其余部分](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%232-CreatingaStubProject/AbouttheRestoftheTutorials.md)
+ * [关于我们的工具](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%232-CreatingaStubProject/AboutOurTools.md)
+ * [步骤#1：创建项目](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%232-CreatingaStubProject/Step%231CreatingtheProject.md)
+ * [步骤#2：设置模拟器](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%232-CreatingaStubProject/Step%232SetUptheEmulator.md)
+ * [步骤#3：设置设备](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%232-CreatingaStubProject/Step%233SetUptheDevice.md)
+ * [步骤#4：运行项目](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%232-CreatingaStubProject/Step%234RunningtheProject.md)
+ * [下集预告...](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%232-CreatingaStubProject/InOurNextEpisode.md)
 
 ####TODO   
