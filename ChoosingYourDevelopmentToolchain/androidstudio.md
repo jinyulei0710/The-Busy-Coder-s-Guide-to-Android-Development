@@ -1,0 +1,5 @@
+###Android Studio
+
+下一代谷歌支持的Android集成开发环境是Android Studio。基于IntelliJIDEA,Android Stdio是新的Google努力的基石为给予Android开发者一流的开发工具。虽然在2014年11月份才出到了1.0，倒是AndroidStudio在多个预览和beta版中已经被使用18个月了。虽然它仍然存在bug，但是无疑已经够稳定来进行应用开发了。
+
+下一章包含了一节如何设置Andorid Studio的内容

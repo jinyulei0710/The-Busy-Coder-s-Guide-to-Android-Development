@@ -1,0 +1,6 @@
+###Eclipse
+
+Eclipse 也是一个流行的集成开发环境，特别是对Java开发来说。Eclipse是谷歌最初为Android提供的集成开发环境,通过Android 开发者工具插件，使Eclipse核心感知到Android。ADT插件，本质上，进行一般的Eclipse操作并且对它们进行拓展从而能满足Android项目的要求。
+
+注意，尽管如此，Google以及不再维护ADT了。Eclipse基金会启动了"Andmore"项目来尝试继续匀速Eclipse开发Android应用。这本书这次没有包含Andmore项目，Google强烈建议开发者不用使用启动ADT的Eclipse。
+

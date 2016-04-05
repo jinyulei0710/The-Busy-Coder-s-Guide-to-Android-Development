@@ -1,0 +1,3 @@
+###Intelli IDEA
+
+虽然AndroidStudio是基于IntelliJ IDEA,你仍然可以使用最初的IntelliJ IDEA进行Android应用开发。大量Android Studio功能的子集在IDEA Andorid插件里都有。加上，商业IDEA终极版在Andorid开发之外的许多领域是在Android Studio之上的。
