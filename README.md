@@ -61,19 +61,19 @@
  * [你从中得到了什么](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ContentsofAndroidProjects/WhatYouGetOutOfIt.md)
  * [项目和这本书](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ContentsofAndroidProjects/ProjectsandthisBook.md)
 
-* 介绍Gradle和Manifest
- * Gradle:最大的问题
- * 获取Gradle
- * Gradle版本和用于Android的Gradle版本
- * Gradle环境变量
- * 分析Gradle文件
- * 介绍Manifest
- * Manifest和Gradle之间的共同事物
- * 其他需要注意的Gradle事项
- * GUI在哪?
- * Manifest的其余部分
- * 学习更多Gradle的事项
- * 走小径
+* [介绍Gradle和Manifest](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/IntroducingGradleandTheManifest)
+ * [Gradle:最大的问题](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/IntroducingGradleandTheManifest/GradleTheBigQuestions.md)
+ * [获取Gradle](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/IntroducingGradleandTheManifest/ObtainingGradle.md)
+ * [Gradle版本和用于Android的Gradle版本](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/IntroducingGradleandTheManifest/VersionsofGradleandGradleforAndroid.md)
+ * [Gradle环境变量](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/IntroducingGradleandTheManifest/GradleEnvironmentVariables.md)
+ * [分析Gradle文件](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/IntroducingGradleandTheManifest/ExaminingtheGradleFiles.md)
+ * [介绍Manifest](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/IntroducingGradleandTheManifest/IntroducingtheManifest.md)
+ * [Manifest和Gradle之间的共同事物](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/IntroducingGradleandTheManifest/ThingsInCommonBetweenTheManifestandGradle.md)
+ * [其他需要注意的Gradle事项](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/IntroducingGradleandTheManifest/OtherGradleItemsofNote.md)
+ * [图形界面在哪?](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/IntroducingGradleandTheManifest/Where'sTheGUI.md)
+ * [Manifest的其余部分](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/IntroducingGradleandTheManifest/TheRestOftheManifest.md)
+ * [学习更多关于Gradle的事情](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/IntroducingGradleandTheManifest/LearningMoreAboutGradlle.md)
+ * [造访小径](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/IntroducingGradleandTheManifest/VisittheTrails.md)
 
 * 教程#3-改变我们的Manifest(和Gradle文件)
  * 关于相对路径的注意点
