@@ -25,6 +25,7 @@
     * [还要其它选择](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ChoosingYourDevelopmentToolchain/YetOtherAlternatives.md)
     * [集成开发环境和这本书](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ChoosingYourDevelopmentToolchain/IDEs...AndThisBook.md)
     * [我们没有包含的内容](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ChoosingYourDevelopmentToolchain/WhatWeAreNotCovering.md)
+ 
 * [教程#1-安装工具](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/Tutorial%231-InstallingtheTools)
   * [步骤#1-检查你的硬件需求](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%231-InstallingtheTools/Step%231-CheckingYourHardwareRequirements.md)
   * [步骤#2-设置Java和32位Linux支持](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%231-InstallingtheTools/Step%232-SettingUpJavaand32-BitLinuxSupport.md)
