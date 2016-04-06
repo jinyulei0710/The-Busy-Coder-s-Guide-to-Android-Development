@@ -1,0 +1,6 @@
+##熟悉AndroidStudio
+Eclipse已经存在很长的一段时间了并且被证明是一个很流行的集成开发环境。作为结果，有相当多关于它的材料，从书籍博客到Stack Overflow上的问题和官方项目文档。
+
+Android Studio跟它的父亲，IntelliJIDEA有很多共同功能。但是，IDEA本身没有取得像Eclipse这样等级的受欢迎程度，即使它作为许多开发商的选择已经有一段时日了。并且AndroidStudio的对IDEA的更改大部分是没有文档化的。
+
+因此，这章将作为AndroidStudio集成开发环境的一个快速教程，来帮助你得到解决。其他Android中Android特有的功能会在章节接下来的内容中进行探索。
