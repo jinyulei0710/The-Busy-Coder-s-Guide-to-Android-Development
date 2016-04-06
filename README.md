@@ -75,11 +75,11 @@
  * [学习更多关于Gradle的事情](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/IntroducingGradleandTheManifest/LearningMoreAboutGradlle.md)
  * [造访小径](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/IntroducingGradleandTheManifest/VisittheTrails.md)
 
-* 教程#3-改变我们的Manifest(和Gradle文件)
- * 关于相对路径的注意点
- * 步骤#1 支持多屏
- * 步骤#2 添加我们支持的最小和目标SDK版本
- * 下集预告...
+* [教程#3-改变我们的Manifest(和Gradle文件)](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/Tutorial%233-ChangingOurManifest(andGradleFile))
+ * [关于相对路径的一些注意点](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%233-ChangingOurManifest(andGradleFile)/SomeNotesAboutRealtivePaths.md)
+ * [步骤#1支持多个屏幕大小](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%233-ChangingOurManifest(andGradleFile)/Step%231SupportingScreens.md)
+ * [步骤#2 添加我们的最小和目标SDK版本](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%233-ChangingOurManifest(andGradleFile)/Step%232AddingOurMinimumandTargetSDKVersions.md)
+ * [下集预告...](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%233-ChangingOurManifest(andGradleFile)/InOurNextEpisode.md)
  
 * [关于资源的一些话](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/SomeWordsAboutResource)
  * [字符串理论](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/SomeWordsAboutResource/StringTheory.md)
