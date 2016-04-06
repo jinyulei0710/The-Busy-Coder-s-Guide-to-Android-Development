@@ -54,12 +54,12 @@
  * [AndroidStudio和发行渠道](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/GettingAroundAndroidStudio/AndroidStudioandReleaseChannels.md)
  * [造访小径](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/GettingAroundAndroidStudio/VisittheTrails.md)
 
-* 项目内容
- * 一般来说，你得到的东西
- * Android Studio项目的内容
- * Eclipse项目内容
- * 你从中得到了什么
- * 项目和这本书
+* [项目内容](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/ContentsofAndroidProjects)
+ * [一般来说，你得到的东西](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ContentsofAndroidProjects/WhatYouGet%2CInGeneral.md)
+ * [Android Studio项目内容](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ContentsofAndroidProjects/TheContentsofanAndroidStudioProject.md)
+ * [Eclipse项目内容](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ContentsofAndroidProjects/TheContentsofanEclipseProject.md)
+ * [你从中得到了什么](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ContentsofAndroidProjects/WhatYouGetOutOfIt.md)
+ * [项目和这本书](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ContentsofAndroidProjects/ProjectsandthisBook.md)
 
 * 介绍Gradle和Manifest
  * Gradle:最大的问题
