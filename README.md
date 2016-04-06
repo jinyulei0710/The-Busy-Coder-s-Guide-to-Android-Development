@@ -46,12 +46,13 @@
  * [步骤#4：运行项目](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%232-CreatingaStubProject/Step%234RunningtheProject.md)
  * [下集预告...](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%232-CreatingaStubProject/InOurNextEpisode.md)
 
-* 熟悉AndroidStudio
- * 浏览项目资源管理器
- * 运行项目
- * 浏览输出
- * Android发行渠道
- * 走小径
+* [熟悉AndroidStudio](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/GettingAroundAndroidStudio)
+ * [浏览项目资源管理器](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/GettingAroundAndroidStudio/NavigatingTheProjectExplorer.md)
+ * [运行项目](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/GettingAroundAndroidStudio/RunningProjects.md)
+ * [浏览输出](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/GettingAroundAndroidStudio/ViewingOutput.md)
+ * [使用Android工具](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/GettingAroundAndroidStudio/AccessingAndroidTools.md)
+ * [AndroidStudio和发行渠道](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/GettingAroundAndroidStudio/AndroidStudioandReleaseChannels.md)
+ * [造访小径](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/GettingAroundAndroidStudio/VisittheTrails.md)
 
 * 项目内容
  * 一般来说，你得到的东西
