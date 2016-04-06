@@ -1,0 +1,4 @@
+###Gradle环境变量
+如果你自己安装了Gradle，你会要定义一个GRADLE_HOME环境变量，指向你安装Gradle的地方。并且添加Gradle的bin／目录到PATH环境变量。
+
+你可能也会考虑设置一个GRADLE_USER_HOME环境变量，指向一个Gradle能创建.gradle子目录的目录，对于存放用户缓存和相关材料。默认情况，Gradle会使用你的标准home目录。

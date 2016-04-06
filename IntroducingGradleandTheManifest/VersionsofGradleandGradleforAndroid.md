@@ -1,0 +1,11 @@
+###Gradle版本和用于Android的Gradle版本
+
+我们会使用的会赋予Gradle“超级Andorid力量”的GradleAndroid插件是周期更新的。每个更新有着与之对应所需的Gradle版本。
+
+据谷歌说，规则是:
+
+AndroidStudio 1.x能跟任意版本为1.x的GradleAndroid插件配合使用，"x"的值不用对应
+Gradle Android1.x应该能跟所有的Gradle2.x版本配合使用
+如果你使用GradleWrapper,你使用的是项目安装在本地的Gradle。只要项目的Gradle版本和在build.gradle文件中GradleAndroid要求的版本匹配－就像在下一章中会涵盖的东西一样，状况就比较良好。
+
+如果你不使用GradleWrapper，你将要需要决定什么时候获得一个新的Android Gradle 发布版本并更新你的Gralde安装和连接在一起的build.gradle文件。

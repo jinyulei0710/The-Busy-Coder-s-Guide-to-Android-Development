@@ -1,0 +1,5 @@
+###学习更多关于Gradle的事情
+
+这本书会深入研究Gradle，在核心章节和小径里都会有。但是，关注点会在用于Android的Gradle上，并且Gradle本身会比它提供更多。Gradle网站有着文档，Gradle相关的书籍，其它Gradle教育资源的链接。
+
+目前，给Android的Gradle文档是有限的并且大都数都在android工具站点。需要注意的是关于新构建系统的首页以及Gradle插件用户指导，虽然跟实际工具相比可能会过时。

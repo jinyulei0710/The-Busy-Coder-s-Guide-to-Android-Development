@@ -1,0 +1,9 @@
+###介绍Manifest
+任何Android应用的地基都是manifest文件：AndroidManifest.xml。这个文件会在Eclipse项目的根目录以及传统AndroidStudio项目app模块的src／main/目录中。
+
+这是你声明什么在你应用中的地方－活动，服务等等。你也能指示这些部分是如何附加到整个Android系统的，例如，你能指示哪个活动（或多个活动）应该出现在设备的主菜单(又叫做，启动页)
+
+当你创建你的应用的时候，你会得到一个为你生成的初始manifest。对于一个简单的应用，除单个活动之外没有其他东西，自动生成的manifest可能就能很好完成工作，或者可能需要较小的修改。另一方面，Android API 示例的的manifest文件长达1000行。你的Andorid应用产品可能会落在中间的某处。
+
+就像之前提到的，一些项即可以在manifest也可以在build.gradle文件中定义。把东西放进manifest的方式仍旧可行，并且对Eclipse来说是唯一的方式，因为Eclipse并不搜寻build.gradle文件。对于AndroidStudio用户来说，你可能会使用Gradle文件并不会把这些共同元素定义在manifest中。
+
