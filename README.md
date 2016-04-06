@@ -31,7 +31,6 @@
  * [步骤#3-安装开发工具](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%231-InstallingtheTools/Step%233-InstalltheDeveloperTools.md)
  * [步骤#4-安装软件开发工具包和附加组件](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%231-InstallingtheTools/Step%234-IntalltheSDKsandAdd-Ons.md)
  * [下集预告...](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%231-InstallingtheTools/InOurNextEpisode.md)
-
 * [Android和项目](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/AndroidandProjects)
  * [常见的概念](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/AndroidandProjects/CommonConcepts.md)
  * [项目和Android Studio](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/AndroidandProjects/ProjectandAndroidStudio.md)
@@ -58,7 +57,6 @@
  * [Eclipse项目内容](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ContentsofAndroidProjects/TheContentsofanEclipseProject.md)
  * [你从中得到了什么](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ContentsofAndroidProjects/WhatYouGetOutOfIt.md)
  * [项目和这本书](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ContentsofAndroidProjects/ProjectsandthisBook.md)
-
 * [介绍Gradle和Manifest](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/IntroducingGradleandTheManifest)
  * [Gradle:最大的问题](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/IntroducingGradleandTheManifest/GradleTheBigQuestions.md)
  * [获取Gradle](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/IntroducingGradleandTheManifest/ObtainingGradle.md)
