@@ -3,7 +3,7 @@
 目录
 
   * [前言](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/Preface)
-    * [欢迎看这本书](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Preface/WelcometotheBook.md)
+    * [欢迎来看这本书](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Preface/WelcometotheBook.md)
     * [这本书的结构](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Preface/TheBook'sStructure.md)
     * [小径](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Preface/TheTrails.md)
     * [关于更新](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Preface/AbouttheUpdates.md)
