@@ -46,4 +46,47 @@
  * [步骤#4：运行项目](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%232-CreatingaStubProject/Step%234RunningtheProject.md)
  * [下集预告...](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%232-CreatingaStubProject/InOurNextEpisode.md)
 
+* 熟悉AndroidStudio
+ * 浏览项目资源管理器
+ * 运行项目
+ * 浏览输出
+ * Android发行渠道
+ * 走小径
+
+* 项目内容
+ * 一般来说，你得到的东西
+ * Android Studio项目的内容
+ * Eclipse项目内容
+ * 你从中得到了什么
+ * 项目和这本书
+
+* 介绍Gradle和Manifest
+ * Gradle:最大的问题
+ * 获取Gradle
+ * Gradle版本和用于Android的Gradle版本
+ * Gradle环境变量
+ * 分析Gradle文件
+ * 介绍Manifest
+ * Manifest和Gradle之间的共同事物
+ * 其他需要注意的Gradle事项
+ * GUI在哪?
+ * Manifest的其余部分
+ * 学习更多Gradle的事项
+ * 走小径
+
+* 教程#3-改变我们的Manifest(和Gradle文件)
+ * 关于相对路径的注意点
+ * 步骤#1 支持多屏
+ * 步骤#2 添加我们支持的最小和目标SDK版本
+ * 下集预告...
+ 
+* 关于资源的一些话
+ * 字符串理论
+ * 有图片？
+ * 尺寸
+ * 还没提到的资源
+
+
+
+
 ####TODO   
