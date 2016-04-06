@@ -45,7 +45,6 @@
  * [步骤#3：设置设备](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%232-CreatingaStubProject/Step%233SetUptheDevice.md)
  * [步骤#4：运行项目](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%232-CreatingaStubProject/Step%234RunningtheProject.md)
  * [下集预告...](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%232-CreatingaStubProject/InOurNextEpisode.md)
-
 * [熟悉AndroidStudio](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/GettingAroundAndroidStudio)
  * [浏览项目资源管理器](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/GettingAroundAndroidStudio/NavigatingTheProjectExplorer.md)
  * [运行项目](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/GettingAroundAndroidStudio/RunningProjects.md)
@@ -53,7 +52,6 @@
  * [使用Android工具](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/GettingAroundAndroidStudio/AccessingAndroidTools.md)
  * [AndroidStudio和发行渠道](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/GettingAroundAndroidStudio/AndroidStudioandReleaseChannels.md)
  * [造访小径](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/GettingAroundAndroidStudio/VisittheTrails.md)
-
 * [项目内容](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/ContentsofAndroidProjects)
  * [一般来说，你得到的东西](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ContentsofAndroidProjects/WhatYouGet%2CInGeneral.md)
  * [Android Studio项目内容](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ContentsofAndroidProjects/TheContentsofanAndroidStudioProject.md)
@@ -74,13 +72,11 @@
  * [Manifest的其余部分](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/IntroducingGradleandTheManifest/TheRestOftheManifest.md)
  * [学习更多关于Gradle的事情](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/IntroducingGradleandTheManifest/LearningMoreAboutGradlle.md)
  * [造访小径](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/IntroducingGradleandTheManifest/VisittheTrails.md)
-
 * [教程#3-改变我们的Manifest(和Gradle文件)](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/Tutorial%233-ChangingOurManifest(andGradleFile))
  * [关于相对路径的一些注意点](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%233-ChangingOurManifest(andGradleFile)/SomeNotesAboutRealtivePaths.md)
  * [步骤#1支持多个屏幕大小](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%233-ChangingOurManifest(andGradleFile)/Step%231SupportingScreens.md)
  * [步骤#2 添加我们的最小和目标SDK版本](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%233-ChangingOurManifest(andGradleFile)/Step%232AddingOurMinimumandTargetSDKVersions.md)
  * [下集预告...](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/Tutorial%233-ChangingOurManifest(andGradleFile)/InOurNextEpisode.md)
- 
 * [关于资源的一些话](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/SomeWordsAboutResource)
  * [字符串理论](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/SomeWordsAboutResource/StringTheory.md)
  * [有图片?](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/SomeWordsAboutResource/GotthePicture.md)
