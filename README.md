@@ -80,11 +80,11 @@
  * 步骤#2 添加我们支持的最小和目标SDK版本
  * 下集预告...
  
-* 关于资源的一些话
- * 字符串理论
- * 有图片？
- * 尺寸
- * 还没提到的资源
+* [关于资源的一些话](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/SomeWordsAboutResource)
+ * [字符串理论](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/SomeWordsAboutResource/StringTheory.md)
+ * [有图片?](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/SomeWordsAboutResource/GotthePicture.md)
+ * [尺寸](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/SomeWordsAboutResource/Dimensions.md)
+ * [还没提到的资源](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/SomeWordsAboutResource/TRTSNBNY.md)
 
 
 
