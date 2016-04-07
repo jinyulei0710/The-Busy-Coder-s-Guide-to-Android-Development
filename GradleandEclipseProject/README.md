@@ -1,0 +1,6 @@
+##Gradle和Eclipse项目
+
+项目主要分两种，那些使用新式Gradle特有目录机构的，和那些使用自2008沿用至2013年的大部分使用Eclipse创建的旧式项目结构。
+
+但是，Gradle在两者中是都能构建项目的。这章会review如何添加Gradle支持到一个Eclipse Android项目中，而不用改变你的目录结构。
+
