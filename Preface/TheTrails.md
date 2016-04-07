@@ -169,7 +169,26 @@
 * 应用内诊断
 * 反对的模式
 
+####控件目录
+* `AdapterViewFlipper`
+* `CalendarView`
+* `DatePicker`
+* `ExpandableListView`
+* `SeekBar`
+* `SlidingDrawer`
+* `StackView`
+* `TabHost`
+* `TimePicker`
+* `ViewFlipper`
 
+####设备目录
+* `Chrome`和`Chrome OS`
+* `Kindle Fire`
+* `BlackBerry`
+*  穿戴式设备
+*  Google 电视
+*  Amazon Fire 电视
 
+####附录
+* 附录A:CWAC Libraries
 
-####TODO
