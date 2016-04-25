@@ -21,19 +21,19 @@
 
 目录：
 
-* 创建你的第二个(第三个以及...)Activity
-* 警告！包含显式意图
-* 使用隐式意图
-* Extra!Extra!
-* 考虑`Parcelable`
-* 共时行和结果
-* 薛定谔的Activity
-* 生，死，以及你的Activity
-* Activity什么时候死亡
-* 漫步生命周期
-* 回收Activity们
-* 应用：超越Activity
-* 不可见Activity的情况
+* [创建你的第二个(第三个以及...)Activity](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ActivitiesandTheirLifecycles/CreatingYourSecond%EF%BC%88andThirdand...)Activity.md)
+* [警告！包含显式意图](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ActivitiesandTheirLifecycles/Warning!ContainsExplictIntents.md)
+* [使用隐式意图](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ActivitiesandTheirLifecycles/UsingImplictIntent.md)
+* [Extra!Extra!](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ActivitiesandTheirLifecycles/extra!extra!.md)
+* [考虑`Parcelable`](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ActivitiesandTheirLifecycles/PonderingParcelable.md)
+* [同步和结果](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ActivitiesandTheirLifecycles/AsynchronicityandResults.md)
+* [薛定谔的Activity](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ActivitiesandTheirLifecycles/Schroedinger'sActivity.md)
+* [你的Activity的生死](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ActivitiesandTheirLifecycles/Life%2CDeath%2CandYourActivity.md)
+* [当Activity死亡的时候](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ActivitiesandTheirLifecycles/WhenActivitiesDie.md)
+* [漫步生命周期](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ActivitiesandTheirLifecycles/WalkingThroughtheLifecycle.md)
+* [回收Activity](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ActivitiesandTheirLifecycles/RecyclingActivities.md)
+* [应用：不只是Activity](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ActivitiesandTheirLifecycles/ApplicationTranscedingtheActivity.md)
+* [不可见Activity的情形](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ActivitiesandTheirLifecycles/TheCaseoftheInvisibleActivity.md)
 
 
 
