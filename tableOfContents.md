@@ -87,3 +87,59 @@
   * [有图片?](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/SomeWordsAboutResource/GotthePicture.md)
   * [尺寸](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/SomeWordsAboutResource/Dimensions.md)
   * [还没提到的资源](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/SomeWordsAboutResource/TRTSNBNY.md)
+  
+* 教程#4-调整我们的资源
+	* 步骤#1:改变名称
+	* 步骤#2:改变图标  
+	* 步骤#3:运行结果
+	* 下回预告
+
+* 控件理论
+	* 什么是控件?
+	* 尺寸，外边距和内边距
+	* 什么是容器?
+	* 绝对布局这个反对模式
+	* 这一节的主题:主题
+
+* Android用户界面
+	* Activity
+	* 剖析Activity
+	* 使用基于XML的布局
+
+* 基础控件
+	* 常见控件
+	* 设定标签
+	* 一个命令按钮
+	* 稍纵即逝的画面
+	* 绿色的域。或其它颜色。
+	* 更多常见概念
+	* 造访小径
+
+* 调试你的应用
+	
+	* 带你到栈轨迹
+	* 混淆类强制转换的情形
+	* 断点
+
+* 线性布局和盒子模型
+	* 概念和属性
+	* Android Studio 图形界面布局编辑器
+
+* 其它常见的控件和容器
+	* 仅仅一个检验盒
+	* 不喜欢检验盒?那转换键和转换器怎么样呢？
+	* 选中单选框
+	* 所有的东西都是相对的
+	* 白板
+	* 滚动机制
+	* 在ProgressBars方面有进展
+	* 造访小径
+
+* 图形用户界面构建，续集
+	* 作出你的选择
+	* 包含Include
+	* 把它包裹起来(在一个容器中)
+	* 渐变控件
+	* 预览
+					
+			
