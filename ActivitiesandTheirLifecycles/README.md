@@ -21,7 +21,7 @@
 
 目录：
 
-* [创建你的第二个(第三个以及...)Activity](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ActivitiesandTheirLifecycles/CreatingYourSecond%EF%BC%88andThirdand...)Activity.md)
+* [创建你的第二个(第三个以及...)Activity](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ActivitiesandTheirLifecycles/CreatingYourSecondActivity.md)
 * [警告！包含显式意图](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ActivitiesandTheirLifecycles/Warning!ContainsExplictIntents.md)
 * [使用隐式意图](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ActivitiesandTheirLifecycles/UsingImplictIntent.md)
 * [Extra!Extra!](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/ActivitiesandTheirLifecycles/extra!extra!.md)
