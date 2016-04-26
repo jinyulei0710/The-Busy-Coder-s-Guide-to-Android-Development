@@ -70,4 +70,6 @@ Android Development。个人认为这本书对开发者很有帮助，所以希�
 |Large-Screen Strategies and Tactics|
 |Tutorial #17-Supporting Large Screens||
 
+###联系方式
 
+![联系方式](http://img.51zcds.com/qq.png)
