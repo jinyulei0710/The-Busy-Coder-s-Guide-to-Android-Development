@@ -15,10 +15,3 @@
 
 这章会提及到res／目录。Android Studio用户会在它们的app/src/main/目录下发现这个。
 
-目录
-
-* [字符串理论](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/SomeWordsAboutResource/StringTheory.md)
-* [有图片？](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/SomeWordsAboutResource/GotthePicture.md)
-* [尺寸](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/SomeWordsAboutResource/Dimensions.md)
-* [还没提到的资源](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/SomeWordsAboutResource/TRTSNBNY.md)
-

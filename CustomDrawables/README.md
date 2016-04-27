@@ -13,24 +13,3 @@ pressed,focused,disabled，等等.)。Android有着特定类型的drawable资源
 
 在本章中，我们会探索这些非传统类型的drawables并且告诉你如何在你的应用中使用。
 
-目录
-
-* [准备工作](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/CustomDrawables/Prerequisites.md)
-* 这些东西到哪里去了？
-* ColorDrawable
-* AnimationDrawable
-* ColorDrawable
-* AnimationDrawable
-* StateListDrawable
-* ColorStateList
-* LayerDrawable
-* TransitionDrawable
-* LevelListDrawable
-* `ScaleDrawable`和`ClipDrawable`
-* InsetDrawable
-* 矢量
-* ShapeDrawable
-* VectorDrawable
-* BitmapDrawable
-* 合成`Drawables`
-* 小洞不补大洞吃苦

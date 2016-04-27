@@ -10,12 +10,3 @@
 表现层样式逻辑。
 
 对数据绑定的兴趣始于2015年，Google通过AndroidStudio,用于android的Gradle插件以及一个新的数据绑定支持包发布首个beta版本的数据绑定支持。
-
-目录：
-* [准备工作](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/TheDataBindingFramework/Prerequisites.md)
-* [现在要做什么呢？](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/TheDataBindingFramework/TheWhatNow.md)
-* [基本步骤](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/TheDataBindingFramework/TheBasicSteps.md)
-* [扩展的布局资源](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/TheDataBindingFramework/TheExtendedLayoutResource.md)
-* [绑定表达式语言](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/TheDataBindingFramework/TheBindingExpressionLanguage.md)
-* [可观察量和更新绑定](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/TheDataBindingFramework/ObservablesandUpdatingtheBinding.md)
-* [其它需要注意的属性特征](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/TheDataBindingFramework/OtherFeaturesofNote.md)

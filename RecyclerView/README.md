@@ -11,17 +11,3 @@
 
 在这章中，我们会从零开始学习RecyclerView,从基本操作开始。其它地方的许多ListView的例子会在这进行重制，来看如何使用RecyclerView完成相同的事情。并且我们会探究一些增加的功能，这些功能或许能让RecyclerView在高端Android应用上值得为之付出努力。
 
-目录：
-
-* [准备工作](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/RecyclerView/Prerequisites.md)
-* [适配器视图以及对它的不满](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/RecyclerView/AdapterViewanditsDiscontents.md)
-* [进入垃圾回收视图](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/RecyclerView/EnterRecyclerView.md)
-* [一个普通的列表](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/RecyclerView/ATrivialList.md)
-* [分隔线选项](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/RecyclerView/DividerOptions.md)
-* [网格](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/RecyclerView/Grids.md)
-* [改变项](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/RecyclerView/VaryingtheItems.md)
-* [可变的行内容](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/RecyclerView/MutableRowContents.md)
-* [改变内容](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/RecyclerView/ChangingtheContents.md)
-* [事物的秩序](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/RecyclerView/TheOrderofThings.md)
-* [其它好东西](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/RecyclerView/OtherBitsofGoodness.md)
-* [进击的类库](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/blob/master/RecyclerView/TheMarchoftheLibraries.md)
