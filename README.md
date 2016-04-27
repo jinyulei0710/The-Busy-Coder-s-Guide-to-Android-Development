@@ -35,7 +35,7 @@ GitHub项目地址：https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-A
 |Tutorial#4-Adjusting Our Resource|jinyulei0710|
 |The Theory of widgets||
 |The Android User Interface||
-|Basic Widget||
+|Basic Widget|jinyulei0710|
 |Debugging Your App||
 |LinearLayout and the Box Model||
 |Other Common Widgets and Containers||
