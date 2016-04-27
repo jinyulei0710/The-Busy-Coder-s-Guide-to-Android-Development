@@ -68,7 +68,7 @@
   * [Manifest的其余部分](/IntroducingGradleandTheManifest/TheRestOftheManifest.md)
   * [学习更多关于Gradle的事情](/IntroducingGradleandTheManifest/LearningMoreAboutGradlle.md)
   * [造访小径](/IntroducingGradleandTheManifest/VisittheTrails.md)
- * [教程#3-改变我们的Manifest(和Gradle文件)](/Tutorial#3-ChangingOurManifest/README.md)
+* [教程#3-改变我们的Manifest(和Gradle文件)](/Tutorial#3-ChangingOurManifest/README.md)
   * [关于相对路径的一些注意点](/Tutorial#3-ChangingOurManifest/SomeNotesAboutRealtivePaths.md)
   * [步骤#1支持多个屏幕大小](/Tutorial#3-ChangingOurManifest/Step#1SupportingScreens.md)
   * [步骤#2 添加我们的最小和目标SDK版本](/Tutorial#3-ChangingOurManifest/Step#2AddingOurMinimumandTargetSDKVersions.md)
