@@ -78,7 +78,4 @@
   * [有图片?](/SomeWordsAboutResource/GotthePicture.md)
   * [尺寸](/SomeWordsAboutResource/Dimensions.md)
   * [还没提到的资源](/SomeWordsAboutResource/TRTSNBNY.md)
-  
-
-
-			
+* [教程#4-调整我们的资源](/AdjustingOurResources/README.md)
