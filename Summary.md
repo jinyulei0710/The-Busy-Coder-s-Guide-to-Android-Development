@@ -9,7 +9,7 @@
     * [Warescription](/Preface/Warescription.md)
     * [延长你的Warescription](/Preface/ExendingYourWarescription.md)
     * [源代码和它的许可证](/Preface/SourceCodeandItsLicense.md)
-    * [知识共享和42F保证](/Preface/CC%2642FG.md)
+    * [知识共享和42F保证](/Preface/CC&42FG.md)
     * [感谢](/Preface/Acknowledgment.md)
 * [关键Android概念](/KeyAndroidConcepts/README.md)
     * [Android应用](/KeyAndroidConcepts/AndroidApplications.md)
