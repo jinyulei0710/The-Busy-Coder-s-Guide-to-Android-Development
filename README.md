@@ -6,6 +6,7 @@ Android Development。个人认为这本书对开发者很有帮助，所以希�
 同时也欢迎大家加入翻译这本书的行列，因为这本书实在是太大了，而且更新速度也相当之快。
 
 GitBook项目地址：https://www.gitbook.com/book/jinyulei0710/the-busy-coder-s-guide-to-android-development/welcome
+
 GitHub项目地址：https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development
 
 ###关于翻译协作流程
