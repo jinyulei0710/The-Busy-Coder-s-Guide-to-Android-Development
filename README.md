@@ -40,7 +40,7 @@ Android Development。个人认为这本书对开发者很有帮助，所以希�
 |Defining and Using Styles||
 |JARs and Library Projects||
 |Tutorial #6-Adding a Library||
-|The Action Bar||
+|The Action Bar|jinyulei0710|
 |#Tutorial #7 -Setting Up the Action Bar||
 |Android's Process Model||
 |Activities and Their Lifecycles|jinyulei0710|
