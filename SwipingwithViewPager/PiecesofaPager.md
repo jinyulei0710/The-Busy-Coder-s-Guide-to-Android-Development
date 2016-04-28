@@ -1,0 +1,9 @@
+###分页的组成
+
+像ListView这样的AdapterView类，是和像ArrayAdapter这样的Adapter对象一起使用。但是ViewPager并不是
+一个AdapterView,尽管从AdapterView.ViewPager吸收了很多模式。因此，ViewPager使用的不是Adapter,而不是
+使用PagerAdapter,有着稍微不同的API。
+
+Android在Android支持包中装载了两个PagerAdapter的实现：FragmentPagerAdapter和FragmentPagerAdapter。
+前一个对数量比较少的fragment的情形是比较好的，所有fragment都是放在内存中并立即生效的。FragmentStatePagerAdapter是适用于有很多fragment展示在ViewPager中的情形，如果有需要的话Android会摒弃掉碎片并转而保存这些碎片的状态。
+

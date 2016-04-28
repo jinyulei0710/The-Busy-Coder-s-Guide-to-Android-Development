@@ -1,0 +1,12 @@
+###其他东西的翻页
+
+你没有一定要在ViewPager中使用碎片。一个常规的PagerAdapter实际上是把视图交给ViewPager处理的。
+提供的基于碎片的PagerAdapter实施办法是从碎片获取视图并使用视图，但是创建你自己的PagerAdapter也是被欣然接受的
+，这样而避免使用碎片。
+
+因此，如果你想要对碎片之外的东西进行翻译，解决方法是不要使用FragmentPagerAdapter或FragmentPagerAdapter,但不是创建你自己的PagerAdapter实现接口，通过这个接口就能避免碎片的使用了。
+
+我们会在之后一章中看一个例子，在这里例子中我们会分析如何同时在ViewPager中展现不止一页的内容。
+
+
+
