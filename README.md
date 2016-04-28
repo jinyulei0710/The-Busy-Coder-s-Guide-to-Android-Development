@@ -53,7 +53,7 @@ GitHub项目地址：https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-A
 |Tutorial #8-Setting Up an Activity||
 |The Tactisc of Fragments|jinyulei0710|
 |Tutorial #9-Starting Our Fragments||
-|Swiping with ViewPager||
+|Swiping with ViewPager|jinyulei0710|
 |Tutorial#10-Rigging Up a ViewPager||
 |Resource Sets and Configurations||
 |Material Design Basic||
