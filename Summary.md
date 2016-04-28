@@ -120,4 +120,13 @@
   * [回收Activity](/ActivitiesandTheirLifecycles/RecyclingActivities.md)
   * [应用不只是Activity](/ActivitiesandTheirLifecycles/ApplicationTranscedingtheActivity.md)
   * [不可见Activity的情形](/ActivitiesandTheirLifecycles/TheCaseOftheInVisibleActivity.md)
+* [教程#8-设置一个Activity](/Tutorial#8-SettingUpAnActivity/README.md)
+* [碎片策略](/TheTacticsofFragments/README.md)
+  * [六要素](/TheTacticsofFragments/TheSixQuestions.md)
+  * [你从哪获取你的碎片](/TheTacticsofFragments/WhereYouGetYourFragmentFrom.md)
+  * [你的首个碎片](/TheTacticsofFragments/YourFirstFragment.md)
+  * [碎片生命周期方法](/TheTacticsofFragments/TheFragmentLifecycleMethods.md)
+  * [碎片和动作栏](/TheTacticsofFragments/FragmentandTheActionBar.md)
+  * [碎片中的碎片](/TheTacticsofFragments/FragmentsWithinFragments.md)
+  * [碎片和多个Activity](/TheTacticsofFragments/FragmentsandMultipleActivity.md)
   
