@@ -113,7 +113,7 @@
   * [Extra!Extra!](ActivitiesandTheirLifecycles/extra!extra!.md)
   * [考虑`Parcelable`](ActivitiesandTheirLifecycles/PonderingParcelable.md)
   * [同步和结果](ActivitiesandTheirLifecycles/AsynchronicityandResults.md)
-  * [薛定谔的Acticity](ActivitiesandTheirLifecycles/Scheoredinger'sActivity.md)
+  * [薛定谔的Acticity](ActivitiesandTheirLifecycles/Schroedinger'sActivity.md)
   * [你的Acticity的生死](/ActivitiesandTheirLifecycles/Life,Death,andYourActivity.md)
   * [当Activity死亡的时候](/ActivitiesandTheirLifecycles/WhenActivitiesDie.md)
   * [漫步生命周期](/ActivitiesandTheirLifecycles/WalkingThroughtheLifecycle.md)
