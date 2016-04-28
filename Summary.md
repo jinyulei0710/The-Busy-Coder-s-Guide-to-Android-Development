@@ -108,7 +108,7 @@
 * [Android的进程模式](/Android'sProgressModel/README.md)
 * [Activity们和它们的生命周期](/ActivitiesandTheirLifecycles/README.md)
   * [创建你的第二个以及第三个以及...个activity](/ActivitiesandTheirLifecycles/CreatingYourSecondActivity.md)
-  * [警告！包含显式意图](/ActivitiesandTheirLifecycles/Warning!ContainsExplicitIntents.md)
+  * [警告！包含显式意图](/ActivitiesandTheirLifecycles/Warning!ContainsExplictIntents.md)
   * [使用隐式意图](ActivitiesandTheirLifecycles/UsingImplictIntent.md)
   * [Extra!Extra!](ActivitiesandTheirLifecycles/extra!extra!.md)
   * [考虑`Parcelable`](ActivitiesandTheirLifecycles/PonderingParcelable.md)
