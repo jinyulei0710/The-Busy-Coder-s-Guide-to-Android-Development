@@ -129,4 +129,11 @@
   * [碎片和动作栏](/TheTacticsofFragments/FragmentsandtheActionBar.md)
   * [碎片中的碎片](/TheTacticsofFragments/FragmentsWithinFragments.md)
   * [碎片和多个Activity](/TheTacticsofFragments/FragmentsandMultipleActivity.md)
-  
+* [教程#9-启动我们的碎片](/StartingOurFragments/README.md)
+* [使用ViewPager进行滑动](/SwipingWithViewPager/README.md)
+   * [滑动设计模式](/SwipingWithViewPager/SwipingDesignPatterns.md)
+   * [分页的组成](/SwipingWithViewPager/PiecesofaPager.md)
+   * [碎片翻页](/SwipingWithViewPager/PagingFragments.md)
+   * [其他东西的翻页](/SwipingWithViewPager/PagingOtherStuff.md)
+   * [指示器](/SwipingWithViewPager/Indicators.md)
+* [教程#10-搭建一个ViewPager](/Tutorial#10-RiggingUpaViewPager/README.md)   
