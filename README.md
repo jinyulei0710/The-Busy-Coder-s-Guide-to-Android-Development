@@ -55,7 +55,7 @@ GitHub项目地址：https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-A
 |Tutorial #9-Starting Our Fragments||
 |Swiping with ViewPager|jinyulei0710|
 |Tutorial#10-Rigging Up a ViewPager||
-|Resource Sets and Configurations||
+|Resource Sets and Configurations|jinyulei0710|
 |Material Design Basic||
 |Dealing with Thread||
 |Requesting Permission||
@@ -75,7 +75,3 @@ GitHub项目地址：https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-A
 |Tutorial#16-Updating the Book||
 |Large-Screen Strategies and Tactics|
 |Tutorial #17-Supporting Large Screens||
-
-###联系方式
-
-![联系方式](http://img.51zcds.com/qq.png)
