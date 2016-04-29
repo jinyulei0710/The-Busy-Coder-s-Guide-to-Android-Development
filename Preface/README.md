@@ -2,7 +2,7 @@
 
 Android的世界很精彩
 
-Android世界很无奈
+Android的世界很无奈
 
 当你觉得Android的世界很精彩
 
