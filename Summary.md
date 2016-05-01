@@ -7,6 +7,7 @@
     * [关于更新](/Preface/AbouttheUpdates.md)
     * [7.2版本有什么新内容](/Preface/WhatsNewInVersion7.2.md)
     * [Warescription](/Preface/Warescription.md)
+    * [关于APK版](/Preface/AbouttheAPKEdition.md)
     * [延长你的Warescription](/Preface/ExendingYourWarescription.md)
     * [源代码和它的许可证](/Preface/SourceCodeandItsLicense.md)
     * [知识共享和42F保证](/Preface/CC&42FG.md)
