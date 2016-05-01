@@ -5,7 +5,7 @@
     * [这本书的结构](/Preface/TheBook'sStructure.md)
     * [小径](/Preface/TheTrails.md)
     * [关于更新](/Preface/AbouttheUpdates.md)
-    * [7.2版本有什么新内容](/Preface/WhatsNewInVersion7.1.md)
+    * [7.2版本有什么新内容](/Preface/WhatsNewInVersion7.2.md)
     * [Warescription](/Preface/Warescription.md)
     * [延长你的Warescription](/Preface/ExendingYourWarescription.md)
     * [源代码和它的许可证](/Preface/SourceCodeandItsLicense.md)
