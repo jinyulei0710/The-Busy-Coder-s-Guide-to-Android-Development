@@ -1,6 +1,6 @@
-###小径
+###那些小径
 
-这里是一份以出场顺序排列的所有小径清单以及与这些小径相关的章回。（除了出现在列表中多次的小径之外，因为它们跨度了多个主要类别）：
+这里是一份以出场顺序排列所列出的所有小径的清单以及与这些小径相关的章回。（除了出现在列表中多次的小径之外，因为它们跨越了多个主要类别）：
 
 ####代码组织和`Gradle`
 * 使用类库项目
@@ -25,14 +25,14 @@
 * 介绍GridLayout
 * 百分比支持库
 * 对话框和对话框Fragment
-* [高级ListView](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/AdvancedListViews)
+* 高级ListView
 * `Action Bar` 导航
 * `Action Modes`和`Context Menus`
 * 其它高级`Action Bar`技巧
 * ToolBar
 * AppCompact:官方`Action Bar`向后兼容
 * ActionBarSherlock
-* [RecyclerView](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/RecyclerView)
+* [RecyclerView]()
 * 实现一个导航抽屉
 * `Android`设计支持库
 * WebView的高级使用
@@ -41,7 +41,7 @@
 * 富文本
 * 动画
 * 旧式动画
-* [自定义`Drawables`](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/CustomDrawables)
+* 自定义`Drawables`
 * 使用`Maps V2`绘制地图
 * 手工制作你自己的视图
 * 高级`Preference`
@@ -53,7 +53,7 @@
 * 事件总线替代品
 * `Tasks`
 * 助手API
-* [数据绑定](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/TheDataBindingFramework)
+* 数据绑定
 * 桌面`Android`应用
 
 ####主页面效果
@@ -191,4 +191,5 @@
 
 ####附录
 * 附录A:CWAC Libraries
-
+* 附录B:N开发者预览版
+* 附录C:社区剧院和基于应用的训练
