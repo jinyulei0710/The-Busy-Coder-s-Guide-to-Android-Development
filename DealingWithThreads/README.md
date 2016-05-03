@@ -10,6 +10,6 @@
 * [来到后台](/DealingWithThreads/GettingtotheBackground.md)
 * [感受异步](/DealingWithThreads/AsyncingFeeling.md)
 * [`AsyncTask`的替代方案](/DealingWithThreads/AlternativestoAsyncTask.md)
-* 附加说明
+* [警告](/DealingWithThreads/AndNow,TheCaveats.md)
 * 事件总线
 * 造访小径
