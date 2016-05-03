@@ -6,10 +6,18 @@
 
 目录:
 
+<<<<<<< Updated upstream
 * [主应用线程](/DealingWithThreads/TheMainApplicationThread.md)
 * [来到后台](/DealingWithThreads/GettingtotheBackground.md)
 * [感受异步](/DealingWithThreads/AsyncingFeeling.md)
 * `AsyncTask`的替代方案
 * 现在，附加说明
+=======
+* [主应用线程](/DealingWithThread/TheMainApplicationThread.md)
+* [来到后台](/DealingWithThread/GettingtotheBackground.md)
+* [感受异步](/DealingWithThread/AsyncingFeeling.md)
+* [`AsyncTask`的替代方案]()
+* 附加说明
+>>>>>>> Stashed changes
 * 事件总线
 * 造访小径
