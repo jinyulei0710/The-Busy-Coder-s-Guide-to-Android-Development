@@ -148,7 +148,7 @@
    * [警告](/DealingWithThreads/AndNow,TheCaveats.md)
    * [事件总线](/DealingWithThreads/EventBuses.md)
    * [造访小径](/DealingWithThreads/VisittheTrails!.md)
-* [请求权限][/RequestingPermissions/README.md]
+* [请求权限](/RequestingPermissions/README.md)
 * [教程:运行时权限支持](/RequestingPermissions/README.md)
 * [资源，文件，和数据分析](/Assets,Files,andDataParsing/README.md)
 * [教程#11-添加样例内容](/Tutorial#11-AddingSimpleContent,md)
