@@ -8,3 +8,12 @@ HTTP，XMPP，SMTP等等。
 
 这本书的重点在于高级形式的访问，[WebKit组件](https://github.com/jinyulei0710/The-Busy-Coder-s-Guide-to-Android-Development/tree/master/TheWebViewWidget)和网络访问API，因为任何时候忙碌的编程人员应该尝试重用已存在的组件而不是在启动自己的线上协议。
 
+目录:
+
+[`DIY HTTP`](/InternetAccess/DIYHTTP.md)
+[`HttpClient`怎么样](/InternetAccess/WhatAboutHttpClient?.md)
+[经由`DownloadManager`的HTTP](/InternetAccess/HTTPviaDownloadManager.md)
+[使用第三方JAR包](/InternetAccess/UsingThird-PartyJARs.md)
+[SSL](/InternetAccess/SSL.md)
+[使用HttpClient类库](/InternetAccess/UsingHTTPClientLibraries.md)
+[造访小径](/InternetAccess/VisittheTrails.md)
