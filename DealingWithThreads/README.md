@@ -6,10 +6,10 @@
 
 目录:
 
-* [主应用线程](/TheMainApplicationThread.md)
-* [来到后台](/GettingtotheBackground.md)
-* [感受异步](/AsyncingFeeling.md)
-* [`AsyncTask`的替代方案](/AlternativestoAsyncTask.md)
-* [警告](/AndNow,TheCaveats.md)
-* [事件总线](/EventBuses.md)
-* [造访小径](/VisittheTrails!.md)
+* [主应用线程](/DealingWithThreads/TheMainApplicationThread.md)
+* [来到后台](/DealingWithThreads/GettingtotheBackground.md)
+* [感受异步](/DealingWithThreads/AsyncingFeeling.md)
+* [`AsyncTask`的替代方案](/DealingWithThreads/AlternativestoAsyncTask.md)
+* [警告](/DealingWithThreads/AndNow,TheCaveats.md)
+* [事件总线](/DealingWithThreads/EventBuses.md)
+* [造访小径](/DealingWithThreads/VisittheTrails!.md)
