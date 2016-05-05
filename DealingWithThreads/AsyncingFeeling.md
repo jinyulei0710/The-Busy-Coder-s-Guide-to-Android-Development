@@ -1,6 +1,6 @@
 ###感受异步
 
-处理现场问题的常用做法是使用`AsyncTask`。有了AsyncTask,Android就会处理好隔开的后台线程和UI线程
+处理线程问题的常用做法是使用`AsyncTask`。有了AsyncTask,Android就会处理好隔开的后台线程和UI线程
 之间协调的的所有杂务。此外，Android本身会分配和移除后台线程。并且，它维护了一个小型的工作队列，
 更加强调了`AsyncTask`一劳永逸的感觉。
 
