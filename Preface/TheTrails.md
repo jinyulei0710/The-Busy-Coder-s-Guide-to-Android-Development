@@ -8,34 +8,34 @@
 * `Gradle`和`Tasks`
 * `Gradle`和新项目结构
 * `Gradle`和依赖
-* 清单合并规则
+* `Manifest`合并规则
 * 应用签名
 * 发行
-* 针对`Android`的高级`Gradle`小窍门
+* 用于`Android`的高级`Gradle`小窍门
 
 ####测试
-* JUnit和Android
-* 使用JUnit4测试
-* MonkeyRunner和Test Monkey
+* 使用`JUnit4`进行测试
 * 使用UIAutomator测试
+* 单元测试
+* `MonkeyRunner`和`Test Monkey`
 
 ####高级UI
 * 通知
 * 高级通知
 * 介绍GridLayout
 * 百分比支持库
-* 对话框和对话框Fragment
-* 高级ListView
+* `Dialog`和`DialogFragment`
+* 高级`ListView`
 * `Action Bar` 导航
 * `Action Modes`和`Context Menus`
 * 其它高级`Action Bar`技巧
-* ToolBar
-* AppCompact:官方`Action Bar`向后兼容
-* ActionBarSherlock
-* [RecyclerView]()
-* 实现一个导航抽屉
+* `ToolBar`
+* `AppCompact`:官方`Action Bar`向后兼容
+* `ActionBarSherlock`
+* `RecyclerView`
+*  实现一个导航抽屉
 * `Android`设计支持库
-* WebView的高级使用
+* `WebView`的高级使用
 * 输入法框架
 * 字体
 * 富文本
@@ -46,8 +46,8 @@
 * 手工制作你自己的视图
 * 高级`Preference`
 * 自定义对话框和`Preference`
-* 进度指示
-* 利用分页
+* 进度指示器
+* `Pagers`还有更多的乐趣
 * 关注管理和可访问性
 * 多种UI策略
 * 事件总线替代品
