@@ -139,7 +139,7 @@
    * [指示器](/SwipingwithViewPager/Indicators.md)
 * [教程#10-搭建一个ViewPager](/Tutorial#10-RiggingUpaViewPager/README.md)   
 * [资源集和配置](/ResourceSetsandConfigurations.md/README.md)
-   * [配置是什么?以及它们是如何改变的?](/ResourceSetsandConfigurations/What'saConfiguration?AndHowDoTheyChange?.md)
+   * [配置是什么?以及它们是如何改变的?](/ResourceSetsandConfigurations/What'saConfigurationAndHowDoTheyChange.md)
    * [配置和资源集](/ResourceSetsandConfigurations/ConfigurationsandResourceSets.md)
    * [屏幕大小和方向](/ResourceSetsandConfigurations/ScreenSizeandOrientation.md)
    * [应对错综复杂的状况](/ResourceSetsandConfigurations/CopingwithComplexity.md)
