@@ -17,7 +17,7 @@
 
 目录:
 
-* [配置是什么?以及它们是如何改变的?](/ResourceSetsandConfigurations/What'saConfiguration?AndHowDoTheyChange?.md)
+* [配置是什么?以及它们是如何改变的?](/ResourceSetsandConfigurations/What'saConfigurationAndHowDoTheyChange.md)
 * [配置和资源集](/ResourceSetsandConfigurations/ConfigurationsandResourceSets.md)
 * [屏幕大小和方向](/ResourceSetsandConfigurations/ScreenSizeandOrientation.md)
 * [应对错综复杂的状况](/ResourceSetsandConfigurations/CopingwithComplexity.md)
