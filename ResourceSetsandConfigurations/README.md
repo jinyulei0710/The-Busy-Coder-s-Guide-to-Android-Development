@@ -26,5 +26,5 @@
 * [默认的变化行为](/ResourceSetsandConfigurations/DefaultChangeBehavior.md)
 * [状态保存的多个场景](/ResourceSetsandConfigurations/StateSavingScenarios.md)
 * [你的配置改变选项](/ResourceSetsandConfigurations/YourOptionsforConfigurationChanges.md)
-* [阻碍旋转](/ResourceSetsandConfigurations/BlockingRotaions.md)
+* [阻碍旋转](/ResourceSetsandConfigurations/BlockingRotations.md)
 * [来自Android项目视图的一句话](/ResourceSetsandConfigurations/AndNow,aWordFromtheAndroidProjectView.md)
