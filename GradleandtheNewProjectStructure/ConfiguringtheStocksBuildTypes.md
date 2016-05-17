@@ -55,7 +55,7 @@
             	|   |--styles.xml
             	|-- values-v14/
                 	|--styles.xml           
-                	
+
 string.xml 包含了一个app_name的修改版，为了更明显显示我们运行的是这个应用的debug版本。
 
 	<?xml version="1.0" encoding="utf-8"?>
@@ -98,7 +98,7 @@ string.xml 包含了一个app_name的修改版，为了更明显显示我们运�
        	keyAlias "HelloCofig"
        	storePassword 'laser.yams.heady.testy'
        	keyPassword 'fw.stabs.steady.wool'
-     }	
+     }
 	}
 
 	buildTypes{
@@ -110,7 +110,7 @@ string.xml 包含了一个app_name的修改版，为了更明显显示我们运�
        	siningConfig signingConfigs.release
      	}
 	}
-	
+
 正如在介绍给Android的Gradle中提到的，默认配置（defaultConfig）闭包允许我们改变AndroidManifest文件中发现的方面，取代main源集中的实际文件。
 
 构建类型（buildTypes）闭包是我们定义构建类型行为的地方。每个构建类型在构建类型中自己的闭包中都能进行配置，并且我们能在那覆盖多种特性。
@@ -125,7 +125,7 @@ string.xml 包含了一个app_name的修改版，为了更明显显示我们运�
 
 我们的debug构建版本在version name和作为package name applicationId后面加上了后缀。注意修改applicationID只影响Android安装和运行时候的看到的包名。它并不影响R.class所处创建的目录，它用的是AndroidManifest.xml文件中的包名。它也不影响任何任何包中的类，就跟我们写的那时候一样。因此，大都数我们的代码对真实包名的改变是不在意的。例如在PackgeManger中查找东西或者构建组件名的时候，在任意Context（像活动）上使用，而不是一些硬编码的字符串，正如getPackageName()返回的是运行时环境认为的包名，这个包名会包含在构建过程添加的任意后缀。或者使用BuildCondig.APPLICATION_ID，在你没有上下文可以去调用getPackageName()的时候。
 
-我们也可以有一个signingConfig属性，来配置我们的APK文件如何进行数字签名。这会在之后的章节涵盖到。	
+我们也可以有一个signingConfig属性，来配置我们的APK文件如何进行数字签名。这会在之后的章节涵盖到。
 
 ####优先顺序
 给构建类型定义的特性，给默认配置定义的特性会覆盖在Androidmanifest文件中的它们相对应的部分。但是，一个构建类型的源集也可以有它自己的AndroidManifest.xml文件。全部的优先顺序是：
@@ -141,4 +141,3 @@ string.xml 包含了一个app_name的修改版，为了更明显显示我们运�
 但是，Java源代码就有细微的区别了。构建类型的源集仍旧和main源集合并在一起，但是如果冲突的话，结果就是构建错误。构建类型源集和main源集两者之一可以定义任意的源文件，但是不是都可以。所以，当debug可以有一个版本的/you/p,ackage/name/Foo.java，release也能有一个不一样的your/package/name/Foo.java，main就不可也有your/package/name/Foo.java。因此，如果你在构建类型中定义了一个类，你可能需要在所有构建类型中定义这个类。那么任意来自main对这个类的引用对所有构建类型都是适用的。
 
 但是对debug仅有的活动而言就不需要了。假定你想要你的应用中的一个活动提供给开发者缓存状态和其他内存结构的诊断信息。虽然你可以通过调试软件得到，但是有点烦人，仅仅轻触启动icon会更简单。但是你不想要，更不说用说需要，这个诊断活动存在在你的release构建中。为了做这项工作，你要把活动的Java类连同它的资源和manifest入口（包括Main/LAUNCHER<intent-filter>）一起只放进debug源集.由于main源集没有引用到你的诊断活动，release构建版本就不需要实现这个Java类。
-	              	

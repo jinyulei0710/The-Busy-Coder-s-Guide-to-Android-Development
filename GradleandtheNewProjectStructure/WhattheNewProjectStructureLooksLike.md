@@ -1,6 +1,7 @@
 ###新的项目结构是什么样的
 
-有了这些知识背景，让我们看下“Gradle／helloNew”这个样例项目。这个项目开始是个Eclipse项目，然后通过Eclipse导出向导有了个build.gradle文件。尽管之后，它会被重组成适应新的项目结构。
+有了这些知识背景，让我们看下“Gradle／helloNew”这个样例项目。这个项目开始是个Eclipse项目，
+然后通过Eclipse导出向导有了个build.gradle文件。尽管之后，它会被重组成适应新的项目结构。
 
 ####目录树
 预先组织好的项目目录树是相当传统的，只是添加了一些Gradle特性文件：
@@ -123,10 +124,7 @@ build.gradle文件就跟我们在Gradle介绍那一章描述的很像：
    	 compileSdkVersion 19
     	buildToolsVersion "21.1.2"
 	}    
-	
+
 我们有来描述我们构建工具所需的buildscript闭包，com.android.application插件。我们所编译的android版本以及使用的构建工具版本。
 
 作为结果呢，我们有了标准的任务，包括installDebug.
-
-  
-                
