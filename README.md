@@ -3,4 +3,4 @@
 这是一本正在翻译中的书，翻译的是Mark L.Murphy的The Busy Coder's Guide to
 Android Development。
 
-![cover](/Image/cover.png)
+![cover](/Image/cover.png =240x400)
