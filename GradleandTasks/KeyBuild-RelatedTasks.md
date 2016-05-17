@@ -1,6 +1,6 @@
 ###关键构建相关任务
 
-为了找出什么任务是你可用的，你可以从项目目录中运行gradle任务。这就会导致类似如下的输出：
+为了找出什么任务是你可用的，你可以从项目目录中运行`gradle`任务。这就会导致类似如下的输出：
 
 	:tasks
 
@@ -23,7 +23,7 @@
 	assemble - Assembles all variants of all applications and secondary 	packages.
 	assembleDebug-Assemables all Debug builds
 	assembleDebugTest - Assembles the Test build for the Debug build
-	assembleRelase - Assembles all Release builds 
+	assembleRelase - Assembles all Release builds
 	build - Assembles and tests this project
 	buildDependents - Assembles and tests this project and all projects that 	depend on it.
 	buildNeeded - Assembles and tests this project and all project it depends on.
@@ -63,7 +63,7 @@
 	compileDebugSource
 	compileReleaseSource
 
-	Rules 
+	Rules
 
 	-----------
 	Pattern:clean:Cleans the output files of a task.
@@ -75,15 +75,20 @@
 	BUILD SUCCESSFUL
 
 	Total time:9.669 secs
-	
-这个列表是根据build.gradle的内容自动生成的，尤其是包含由com.android.application插件定义的任务。
 
-原则上说，你是假定在运行任务的时候详述整个任务名的。但是，你可以简略的表述方法，只要它能唯一地对任务进行识别。
+这个列表是根据`build.gradle`的内容自动生成的，尤其是包含由com.android.application插件所定义的任务。
 
-开发者会使用的最常见的任务，至少短期来说，是installDebug.这会构建一个调试模式的应用并将其安装在一个可用的设备或模拟器上。这大致是跟基于ant命令行构建的ant install debug对应的。
+原则上说，你应该运行任务的时候详述整个任务名。但是，只要它能唯一地对任务进行识别，你就能使用简写。
 
-只要有installDeubg，那就有installRelease.任务的Debug和Release部分不是硬编码的，而是源于定义在build.gradle文件中的"build types"。概念以及规则和用法会在下一章涵盖到。但是，默认情况下installRelease是没有的，因为安装应用需要的是签名过的APK,并且给Android的Gradle不知道如何对它进行签名。同样我们会在下一章讲到。
+至少短期来说，开发者会使用的最常见的任务是installDebug.这会构建一个调试模式的应用并将其安装在
+一个可用的设备或模拟器上。这大致是跟基于ant命令行构建的ant install debug对应的。
 
-如果你仅仅想要构建应用，却不安装它,assembleDebug(aD)或assmbleRelease(aR)会完成这个目标.如果你要从真机或模拟器上卸载应用,unintallDebug（uD）和uninstallRelease(uR)应用有用。
+只要有installDeubg，那就有installRelease.任务的Debug和Release部分不是硬编码的，而是源于
+定义在build.gradle文件中的"build types"。概念以及规则和用法会在下一章涵盖到。但是，
+默认情况下installRelease是没有的，因为安装应用需要的是签名过的APK,并且用于Android的`Gradle`
+不知道如何对它进行签名。同样我们会在下一章讲到。
 
-至于其它任务，例如“check”任务，会在之后的章节涵盖到。
+如果你仅仅想要构建应用，却不安装它,assembleDebug(aD)或assmbleRelease(aR)会达到这个目标.
+如果你要从真机或模拟器上卸载应用,unintallDebug（uD）和uninstallRelease(uR)应该有用。
+
+至于其它任务，例如“check”任务，会在之后的章回涵盖到。
