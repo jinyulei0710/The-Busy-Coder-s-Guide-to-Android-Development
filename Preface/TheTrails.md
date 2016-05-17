@@ -4,9 +4,9 @@
 
 ####代码组织和`Gradle`
 * [使用类库项目](/WorkingwithLibraryProjects/README.md)
-* `Gradle`和旧式项目
-* `Gradle`和`Tasks`
-* `Gradle`和新项目结构
+* [`Gradle`和旧式项目](/GradleandEclipseProjects/README.md)
+* [`Gradle`和`Tasks`](/GradleandTasks/README.md)
+* [`Gradle`和新项目结构](/GradleandtheNewProjectStructure/README.md)
 * `Gradle`和依赖
 * `Manifest`合并规则
 * 应用签名
