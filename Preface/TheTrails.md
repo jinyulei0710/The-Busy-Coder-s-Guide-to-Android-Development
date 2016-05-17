@@ -3,7 +3,7 @@
 这里是一份以出场顺序排列所列出的所有小径的清单以及与这些小径相关的章回。（除了出现在列表中多次的小径之外，因为它们跨越了多个主要类别）：
 
 ####代码组织和`Gradle`
-* 使用类库项目
+* [使用类库项目](/WorkingwithLibraryProjects/README.md)
 * `Gradle`和旧式项目
 * `Gradle`和`Tasks`
 * `Gradle`和新项目结构
@@ -15,7 +15,7 @@
 
 ####测试
 * 使用`JUnit4`进行测试
-* 使用UIAutomator测试
+* 使用UIAutomator进行测试
 * 单元测试
 * `MonkeyRunner`和`Test Monkey`
 
@@ -31,7 +31,6 @@
 * 其它高级`Action Bar`技巧
 * `ToolBar`
 * `AppCompact`:官方`Action Bar`向后兼容
-* `ActionBarSherlock`
 * `RecyclerView`
 *  实现一个导航抽屉
 * `Android`设计支持库
