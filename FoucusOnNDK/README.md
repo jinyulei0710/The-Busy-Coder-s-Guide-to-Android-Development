@@ -14,7 +14,7 @@ OpenGL和OpenSL许多框架的游戏应用，是超出本书的范围的。
 
 目录：
 
-* 准备工作
+* [准备工作](/FoucusOnNDK/Prerequisites.md)
 * NDK的职责
 * NDK安装和项目设置
 * 编写你的MakeFile
