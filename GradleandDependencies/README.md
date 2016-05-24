@@ -10,3 +10,19 @@ John Donne 写过这么一句话，没有人是一座孤岛。现如今，几乎
 这章会概述你的应用可以拥有的“依赖”种类以及你该如何配置`Gradle`让其支持它们。
 
 注意：这章所描述的项目不是能被Eclipse使用的，因为在写这部分内容的时候Eclipse并不支持Gradle。
+
+目录：
+* [准备工作和警告](/GradleandDependencies/PrerequisitesandWarning.md)
+* 依赖？
+* 两个依赖闭包的故事
+* 依赖于JAR包
+* 依赖于NDK二进制文件
+* 依赖于一个Android类库项目
+* 依赖于子项目
+* 依赖于`Artifact`
+* 从Gradle创建JAR包
+* 经由`Flavor`的依赖
+* 一个传递依赖的特性
+* 经由构建类型的依赖
+* 分析一些`CWAC`构件
+* 依赖和项目结构对话框
