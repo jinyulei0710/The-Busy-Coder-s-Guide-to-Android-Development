@@ -16,8 +16,8 @@ John Donne 写过这么一句话，没有人是一座孤岛。现如今，几乎
 * [依赖？](/GradleandDependencies/Denpendencies.md)
 * [两个依赖闭包的故事](/GradleandDependencies/ATaleofTwoDenpendenciesClosures.md)
 * [依赖于JAR包](/GradleandDependencies/DenpendingUponaJAR.md)
-* 依赖于NDK二进制文件
-* 依赖于一个Android类库项目
+* [依赖于NDK二进制文件](/GradleandDependencies/DependingNDKBinaries.md)
+* [依赖于一个Android类库项目](/GradleandDependencies/DependingUponAndroidLibraryProject.md)
 * 依赖于子项目
 * 依赖于`Artifact`
 * 从Gradle创建JAR包
