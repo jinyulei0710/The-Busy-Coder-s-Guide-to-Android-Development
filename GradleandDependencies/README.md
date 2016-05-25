@@ -13,9 +13,9 @@ John Donne 写过这么一句话，没有人是一座孤岛。现如今，几乎
 
 目录：
 * [准备工作和警告](/GradleandDependencies/PrerequisitesandWarning.md)
-* 依赖？
-* 两个依赖闭包的故事
-* 依赖于JAR包
+* [依赖？](/GradleandDependencies/Denpendencies.md)
+* [两个依赖闭包的故事](/GradleandDependencies/ATaleofTwoDenpendenciesClosures.md)
+* [依赖于JAR包](/GradleandDependencies/DenpendingUponaJAR.md)
 * 依赖于NDK二进制文件
 * 依赖于一个Android类库项目
 * 依赖于子项目
