@@ -18,8 +18,8 @@ John Donne 写过这么一句话，没有人是一座孤岛。现如今，几乎
 * [依赖于JAR包](/GradleandDependencies/DenpendingUponaJAR.md)
 * [依赖于NDK二进制文件](/GradleandDependencies/DependingNDKBinaries.md)
 * [依赖于一个Android类库项目](/GradleandDependencies/DependingUponAndroidLibraryProject.md)
-* 依赖于子项目
-* 依赖于`Artifact`
+* [依赖于子项目](/GradleandDependencies/DependingUponSubProjects.md)
+* [依赖于`Artifacts`](/GradleandDependencies/DependingUponArtifacts.md)
 * 从Gradle创建JAR包
 * 经由`Flavor`的依赖
 * 一个传递依赖的特性
