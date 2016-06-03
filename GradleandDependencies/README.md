@@ -21,6 +21,7 @@ John Donne 写过这么一句话，没有人是一座孤岛。现如今，几乎
 * [依赖于子项目](/GradleandDependencies/DependingUponSubProjects.md)
 * [依赖于`Artifacts`](/GradleandDependencies/DependingUponArtifacts.md)
 * [从Gradle创建JAR包](/GradleandDependencies/CreatingAdnroidJARsfromGradle.md)
+* [经由构建类型的依赖](/GradleandDependencies/DependenciesByBuildType.md)
 * 经由`Flavor`的依赖
 * 一个传递依赖的特性
 * 经由构建类型的依赖
