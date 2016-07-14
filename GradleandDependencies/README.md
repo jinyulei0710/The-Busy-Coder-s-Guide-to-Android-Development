@@ -24,5 +24,5 @@ John Donne 写过这么一句话，没有人是一座孤岛。现如今，几乎
 * [经由构建类型的依赖](/GradleandDependencies/DependenciesByBuildType.md)
 * [经由`Flavor`的依赖](/GradleandDependencies/DenpenciesByFlavor.md)
 * [一个传递依赖的特性](/GradleandDependencies/APropertyofTransitive.md)
-* 检查一些`CWAC`构件
-* 依赖和项目结构对话框
+* [分析一些`CWAC`构件](/GradleandDependencies/ExaminingSomeCWACBuilds.md)
+* [依赖和项目结构对话框](/GradleandDependencies/DependenciesandtheProjectStructureDialog.md)
