@@ -1,13 +1,17 @@
 ##RecyclerView(垃圾回收视图)
-视觉表现条目集合是许多移动应用的一个很重要的方面。这项功能的经典Android实现，是由AdapterView控件家族:ListView,GridView,Spinner等完成的。但是，它们存在一定局限性，特别是涉及到列表内容动画变化的高级功能的时候。
+直观表示多个条目的集合是许多移动应用的一个很重要的方面。这项功能的经典Android实现，是由AdapterView控件家族:
+ListView,GridView,Spinner等完成的。但是，它们存在一定局限性，特别是涉及到列表内容动画变化的高级功能的时候。
 
-在2014年，Google通过Android支持包发布了RecyclerView。开发者可以添加recyclerview-v7到它们的项目中并使用RecyclerView作为大部分AdapterView家族的一个替代方案。RecyclerView是完新的一个更为灵活的容器，有着很多的钩子和代理从而允许行为的插入。
+在2014年，Google通过Android支持包发布了RecyclerView。开发者可以添加recyclerview-v7到它们的项目中
+并使用RecyclerView作为大部分AdapterView家族的一个替代方案。RecyclerView是一个全新的更为灵活的容器，
+有着很多的钩子和代理从而允许行为的插入。
 
 这主要有两个影响：
 
-1.Recyclerview确实比其对应的Adapterview强大的多.
+1.Recyclerview确实比起对应的Adapterview要强大的多.
 
 2.RecyclerView不能拿来就用，甚至于复现基础的ListView/GridView功能也要写相当多的代码。
 
-在这章中，我们会从零开始学习RecyclerView,从基本操作开始。其它地方的许多ListView的例子会在这进行重制，来看如何使用RecyclerView完成相同的事情。并且我们会探究一些增加的功能，这些功能或许能让RecyclerView在高端Android应用上值得为之付出努力。
-
+在这章中，我们会从零开始学习RecyclerView,从基本操作开始。其它地方的许多ListView的例子会在这复现，
+来看如何使用RecyclerView完成相同的事情。并且我们会探究一些增加的功能，这些功能或许能让RecyclerView在高
+端Android应用上值得为之付出努力。

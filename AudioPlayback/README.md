@@ -4,7 +4,7 @@
 幸运的是，Android提供了音频录音重放的支持，并且我们会在这章中分析其中的一些选项。
 
 目录：
-* 准备工作
-* 获取你的媒介
-* 用于音频的MediaPlayer
-* 其它发出声响的方式
+* [准备工作](/AudioPlayback/Prerequisites.md)
+* [获取你的媒介](/AudioPlayback/GetYourMediaOn.md)
+* [用于音频的MediaPlayer](/AudioPlayback/MediaPlayerforAudio.md)
+* [其它发出声响的方式](/AudioPlayback/OtherWaystoMakeNoise.md)
